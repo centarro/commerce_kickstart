@@ -1,0 +1,7 @@
+{
+  "name": "drupalcommerce/demo_commerce",
+  "type": "drupal-profile",
+  "description": "Demo Commerce 2.x installation profile.",
+  "homepage": "https://github.com/drupalcommerce/demo_commerce",
+  "license": "GPL-2.0+"
+}
