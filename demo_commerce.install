@@ -70,3 +70,32 @@ function demo_commerce_install() {
   // Import our demo content (links, nodes.)
   \Drupal::getContainer()->get('demo_commerce.content_importer')->onInstall();
 }
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function demo_commerce_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_finished']['function'] = 'demo_commerce_install_finished';
+}
+
+/**
+ * Performs final installation steps and displays a 'finished' page.
+ *
+ * @param $install_state
+ *   An array of information about the current installation state.
+ */
+function demo_commerce_install_finished(&$install_state) {
+  install_finished($install_state);
+  // Remove the Search API indexing messages, and all the other status messages.
+  $messenger = \Drupal::service('messenger');
+  $messenger->deleteByType('status');
+  $warning_messages = $messenger->deleteByType('warning');
+  $success_message = t('Congratulations, you installed @drupal!', [
+    '@drupal' => drupal_install_profile_distribution_name(),
+  ]);
+  $messenger->addMessage($success_message);
+  // Re-add the warning messages (after the installation success message).
+  foreach ($warning_messages as $warning_message) {
+    $messenger->addMessage($warning_message, 'warning');
+  }
+}
