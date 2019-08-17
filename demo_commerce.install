@@ -69,6 +69,20 @@ function demo_commerce_install() {
 
   // Import our demo content (links, nodes.)
   \Drupal::getContainer()->get('demo_commerce.content_importer')->onInstall();
+  
+  /** @var \Drupal\commerce_store\StoreStorage $store_storage */
+  $store_storage = \Drupal::entityTypeManager()->getStorage('commerce_store');
+  $stores = $store_storage->loadMultiple();
+  $store = reset($stores);
+  $store_storage->markAsDefault($store);
+
+  foreach (['simple', 'clothing'] as $product_type) {
+    $display = commerce_get_entity_display('commerce_product', $product_type, 'view');
+    $component = $display->getComponent('variations');
+    $component['type'] = 'commerce_cart_flyout_add_to_cart';
+    $display->setComponent('variations', $component);
+    $display->save();
+  }
 }
 
 /**
