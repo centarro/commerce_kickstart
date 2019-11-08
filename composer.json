@@ -5,13 +5,13 @@
   "homepage": "https://github.com/drupalcommerce/demo_commerce",
   "license": "GPL-2.0+",
   "require": {
-    "drupal/admin_toolbar": "~1.0",
+    "drupal/admin_toolbar": "^2.0",
     "drupal/belgrade": "1.x-dev",
-    "drupal/commerce": "~2.0",
+    "drupal/commerce": "^2.0",
     "drupal/commerce_cart_api": "^1.0",
     "drupal/commerce_cart_flyout": "^1.0",
     "drupal/commerce_demo": "1.x-dev",
-    "drupal/swiftmailer": "~1.0",
-    "drupal/token": "~1.0"
+    "drupal/swiftmailer": "^1.0",
+    "drupal/token": "^1.0"
   }
 }
