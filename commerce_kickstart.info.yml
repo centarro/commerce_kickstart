@@ -3,7 +3,7 @@ type: profile
 core_version_requirement: ^8.8 || ^9
 description: 'Install with Drupal Commerce pre-configured.'
 distribution:
-  name: 'Demo Commerce'
+  name: 'Commerce Kickstart'
 dependencies:
   # Standard
   - node
