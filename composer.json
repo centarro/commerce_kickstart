@@ -1,8 +1,8 @@
 {
-  "name": "drupalcommerce/demo_commerce",
+  "name": "drupal/commerce_kickstart",
   "type": "drupal-profile",
-  "description": "Demo Commerce 2.x installation profile.",
-  "homepage": "https://github.com/drupalcommerce/demo_commerce",
+  "description": "Commerce kickstart installation profile.",
+  "homepage": "https://www.drupal.org/project/commerce_kickstart",
   "license": "GPL-2.0+",
   "require": {
     "drupal/admin_toolbar": "^2.0",

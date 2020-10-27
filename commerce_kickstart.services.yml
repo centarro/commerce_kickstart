@@ -1,0 +1,4 @@
+services:
+  commerce_kickstart.content_importer:
+    class: Drupal\commerce_kickstart\ContentImporter
+    arguments: ['@entity_type.manager']

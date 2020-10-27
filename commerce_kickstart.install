@@ -16,7 +16,7 @@ use Drupal\user\UserInterface;
  *
  * @see system_install()
  */
-function demo_commerce_install() {
+function commerce_kickstart_install() {
   // Set front page to "node".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/frontpage')->save(TRUE);
 
@@ -68,8 +68,8 @@ function demo_commerce_install() {
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
 
   // Import our demo content (links, nodes.)
-  \Drupal::getContainer()->get('demo_commerce.content_importer')->onInstall();
-  
+  \Drupal::getContainer()->get('commerce_kickstart.content_importer')->onInstall();
+
   /** @var \Drupal\commerce_store\StoreStorage $store_storage */
   $store_storage = \Drupal::entityTypeManager()->getStorage('commerce_store');
   $stores = $store_storage->loadMultiple();
@@ -88,8 +88,8 @@ function demo_commerce_install() {
 /**
  * Implements hook_install_tasks_alter().
  */
-function demo_commerce_install_tasks_alter(&$tasks, $install_state) {
-  $tasks['install_finished']['function'] = 'demo_commerce_install_finished';
+function commerce_kickstart_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_finished']['function'] = 'commerce_kickstart_install_finished';
 }
 
 /**
@@ -98,7 +98,7 @@ function demo_commerce_install_tasks_alter(&$tasks, $install_state) {
  * @param $install_state
  *   An array of information about the current installation state.
  */
-function demo_commerce_install_finished(&$install_state) {
+function commerce_kickstart_install_finished(&$install_state) {
   install_finished($install_state);
   // Remove the Search API indexing messages, and all the other status messages.
   $messenger = \Drupal::service('messenger');

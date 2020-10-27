@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\demo_commerce;
+namespace Drupal\commerce_kickstart;
 
 use Drupal\commerce_product\Entity\ProductInterface;
 use Drupal\Core\Entity\ContentEntityInterface;
