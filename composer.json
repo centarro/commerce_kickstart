@@ -3,7 +3,7 @@
   "type": "drupal-profile",
   "description": "Commerce kickstart installation profile.",
   "homepage": "https://www.drupal.org/project/commerce_kickstart",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "require": {
     "drupal/admin_toolbar": "^2.0",
     "drupal/belgrade": "1.x-dev",
