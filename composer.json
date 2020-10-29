@@ -1,5 +1,5 @@
 {
-  "name": "drupal/commerce_kickstart",
+  "name": "centarro/commerce_kickstart",
   "type": "drupal-profile",
   "description": "Commerce Kickstart installation profile.",
   "homepage": "https://www.drupal.org/project/commerce_kickstart",
