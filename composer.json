@@ -11,7 +11,12 @@
     "drupal/commerce_cart_api": "^1.0",
     "drupal/commerce_cart_flyout": "^1.0",
     "drupal/commerce_demo": "^1.0",
+    "drupal/facets": "^1.6",
+    "drupal/facets_pretty_paths": "^1.0",
+    "drupal/search_api": "^1.18",
+    "drupal/search_api_db": "^1.18",
     "drupal/swiftmailer": "^2.0",
+    "drupal/taxonomy_menu": "^3.4",
     "drupal/token": "^1.0"
   }
 }
