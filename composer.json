@@ -5,7 +5,7 @@
   "homepage": "https://www.drupal.org/project/commerce_kickstart",
   "license": "GPL-2.0-or-later",
   "require": {
-    "drupal/admin_toolbar": "^2.0",
+    "drupal/admin_toolbar": "^3.0",
     "drupal/belgrade": "^1.0",
     "drupal/commerce": "^2.0",
     "drupal/commerce_cart_api": "^1.0",
