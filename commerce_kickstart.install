@@ -8,6 +8,7 @@
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\user\UserInterface;
+use Drupal\shortcut\Entity\Shortcut;
 
 /**
  * Implements hook_install().
@@ -48,7 +49,7 @@ function commerce_kickstart_install() {
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
 
   // Populate the default shortcut set.
-  $shortcut = entity_create('shortcut', [
+  $shortcut = Shortcut::create([
     'shortcut_set' => 'default',
     'title' => t('Add content'),
     'weight' => -20,
@@ -56,7 +57,7 @@ function commerce_kickstart_install() {
   ]);
   $shortcut->save();
 
-  $shortcut = entity_create('shortcut', [
+  $shortcut = Shortcut::create([
     'shortcut_set' => 'default',
     'title' => t('All content'),
     'weight' => -19,
