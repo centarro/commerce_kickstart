@@ -1,0 +1,15 @@
+# Ignore files dowloaded by composer
+web
+vendor
+bin
+.editorconfig
+.gitattributes
+
+# Ignore files created by composer
+composer.lock
+
+# Ignore private files
+private/*
+
+# Ignore files created by Drupal
+config/sync

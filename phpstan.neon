@@ -1,0 +1,24 @@
+includes:
+  - ./vendor/mglaman/phpstan-drupal/extension.neon
+  - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+
+parameters:
+  paths:
+    - src
+    - commerce_kickstart.install
+    - commerce_kickstart.profile
+  drupal:
+    drupal_root: %currentWorkingDirectory%/web
+  customRulesetUsed: true
+  reportUnmatchedIgnoredErrors: false
+  level: 3
+  ignoreErrors:
+    - '#\Drupal calls should be avoided in classes, use dependency injection instead#'
+    - '#\Call to an undefined method Drupal\\Tests\\WebAssert::#'
+    - "#^Unsafe usage of new static\\(\\)\\.$#"
+    # Drupal allows object property access to custom fields, so we cannot fix
+    # that.
+    - "#^Access to an undefined property Drupal\\\\#"
+    - "#^Property Drupal\\\\.+ \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept .+\\.$#"
+
+
