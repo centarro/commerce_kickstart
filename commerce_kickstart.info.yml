@@ -4,6 +4,7 @@ core_version_requirement: ^8.8 || ^9
 description: 'Install with Drupal Commerce pre-configured.'
 distribution:
   name: 'Commerce Kickstart'
+
 dependencies:
   # Standard
   - node
@@ -68,8 +69,6 @@ dependencies:
   - search_api
   - search_api_db
   - commerce_demo
-  - commerce_cart_api
-  - commerce_cart_flyout
 
 themes:
   - belgrade

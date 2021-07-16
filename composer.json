@@ -27,8 +27,6 @@
     "drupal/admin_toolbar": "^3.0",
     "drupal/belgrade": "^1.0",
     "drupal/commerce": "^2.0",
-    "drupal/commerce_cart_api": "^1.0",
-    "drupal/commerce_cart_flyout": "^1.0",
     "drupal/commerce_demo": "^1.0",
     "drupal/swiftmailer": "^2.0",
     "drupal/token": "^1.0"

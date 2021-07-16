@@ -8,7 +8,7 @@ if (getenv('LANDO') !== 'ON') {
 
 $lando_info = json_decode(getenv('LANDO_INFO'), TRUE);
 $settings['trusted_host_patterns'] = ['.*'];
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'lTXdkpuxcwCgV7ibpN-6SRG9Hb6bpz6wvLMuFco-Qi7CnJ4tcSlIz-tfPGQFsajRSjY2nOnT-Q';
 
 $databases['default']['default'] = [
   'driver' => 'mysql',
