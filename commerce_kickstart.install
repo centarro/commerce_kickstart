@@ -68,15 +68,6 @@ function commerce_kickstart_install() {
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
 
-  // Import our demo content (links, nodes.)
-  \Drupal::getContainer()->get('commerce_kickstart.content_importer')->onInstall();
-
-  /** @var \Drupal\commerce_store\StoreStorage $store_storage */
-  $store_storage = \Drupal::entityTypeManager()->getStorage('commerce_store');
-  $stores = $store_storage->loadMultiple();
-  $store = reset($stores);
-  $store_storage->markAsDefault($store);
-
 }
 
 /**
