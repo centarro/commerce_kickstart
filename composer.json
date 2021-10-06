@@ -1,116 +1,139 @@
 {
-  "name": "centarro/commerce_kickstart",
-  "type": "drupal-profile",
-  "description": "Commerce Kickstart installation profile.",
-  "homepage": "https://www.drupal.org/project/commerce_kickstart",
-  "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "bin-dir": "bin",
-    "sort-packages": true,
-    "preferred-install": {
-      "drupal/core": "dist"
-    }
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
+    "name": "centarro/commerce_kickstart",
+    "type": "drupal-profile",
+    "description": "Commerce Kickstart installation profile.",
+    "homepage": "https://www.drupal.org/project/commerce_kickstart",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "bin-dir": "bin",
+        "sort-packages": true,
+        "preferred-install": {
+            "drupal/core": "dist"
+        }
     },
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
-  "require": {
-    "drupal/admin_toolbar": "^3.0",
-    "drupal/belgrade": "^1.0",
-    "drupal/commerce": "^2.0",
-    "drupal/commerce_demo": "^1.0",
-    "drupal/swiftmailer": "^2.0",
-    "drupal/token": "^1.0"
-  },
-  "require-dev": {
-    "composer/installers": "^1.2",
-    "cweagans/composer-patches": "^1.6.5",
-    "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
-    "drupal/core-composer-scaffold": "^9.1.0",
-    "drupal/core-dev": "^9.1.0",
-    "drupal/devel": "^4.1",
-    "drupal/masquerade": "^2.0",
-    "drush/drush": "^10.0",
-    "kporras07/composer-symlinks": "^1.1",
-    "mglaman/phpstan-drupal": "~0.12.0",
-    "phpspec/prophecy-phpunit": "^2",
-    "phpstan/phpstan-deprecation-rules": "~0.12.0"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/project/commerce_demo.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
     ],
-    "post-update-cmd": [
-      "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
-    ]
-  },
-  "extra": {
-    "symlinks": {
-      "commerce_kickstart.profile": "web/profiles/commerce_kickstart/commerce_kickstart.profile",
-      "commerce_kickstart.install": "web/profiles/commerce_kickstart/commerce_kickstart.install",
-      "commerce_kickstart.info.yml": "web/profiles/commerce_kickstart/commerce_kickstart.info.yml",
-      "commerce_kickstart.links.menu.yml": "web/profiles/commerce_kickstart/commerce_kickstart.links.menu.yml",
-      "commerce_kickstart.services.yml": "web/profiles/commerce_kickstart/commerce_kickstart.services.yml",
-      "src": "web/profiles/commerce_kickstart/src",
-      "modules": "web/profiles/commerce_kickstart/modules",
-      "themes": "web/profiles/commerce_kickstart/themes",
-      "config/install": "web/profiles/commerce_kickstart/config/install",
-      "config/optional": "web/profiles/commerce_kickstart/config/optional",
-      "content": "web/profiles/commerce_kickstart/content"
+    "require": {
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/belgrade": "^2.0",
+        "drupal/better_exposed_filters": "^5.0@beta",
+        "drupal/commerce": "^2.0",
+        "drupal/commerce_file": "^2.0@beta",
+        "drupal/commerce_product_tax": "^1.0@RC",
+        "drupal/commerce_recurring": "^1.0@beta",
+        "drupal/commerce_variation_cart_form": "^1.2",
+        "drupal/core_views_facets": "^1.2",
+        "drupal/facets_pretty_paths": "^1.1",
+        "drupal/field_group": "^3.2",
+        "drupal/jquery_ui_touch_punch": "^1.0",
+        "drupal/swiftmailer": "^2.0",
+        "drupal/token": "^1.0",
+        "npm-asset/jquery-ui-touch-punch": "^0.2.3",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
-    "drupal-scaffold": {
-      "locations": {
-        "web-root": "./web"
-      },
-      "overwrite": true,
-      "file-mapping": {
-        "[web-root]/sites/default/settings.php": "assets/settings.php",
-        "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php"
-      }
+    "require-dev": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
+        "drupal/commerce_demo": "3.0.x-dev",
+        "drupal/core-composer-scaffold": "^9.1.0",
+        "drupal/core-dev": "^9.1.0",
+        "drupal/devel": "^4.1",
+        "drupal/features": "^3.12",
+        "drupal/masquerade": "^2.0",
+        "drush/drush": "^10.0",
+        "kporras07/composer-symlinks": "^1.1",
+        "mglaman/phpstan-drupal": "~0.12.0",
+        "phpspec/prophecy-phpunit": "^2",
+        "phpstan/phpstan-deprecation-rules": "~0.12.0"
     },
-    "installer-name": "commerce_kickstart",
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "installer-paths": {
-      "web/core": [
-        "type:drupal-core"
-      ],
-      "web/profiles/{$name}": [
-        "type:drupal-profile"
-      ],
-      "web/modules/contrib/{$name}": [
-        "type:drupal-module"
-      ],
-      "web/themes/contrib/{$name}": [
-        "type:drupal-theme"
-      ],
-      "web/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "web/modules/custom/{$name}": [
-        "type:drupal-custom-module"
-      ],
-      "web/themes/custom/{$name}": [
-        "type:drupal-custom-theme"
-      ],
-      "drush/contrib/{$name}": [
-        "type:drupal-drush"
-      ]
+    "scripts": {
+        "post-install-cmd": [
+            "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+        ],
+        "post-update-cmd": [
+            "Kporras07\\ComposerSymlinks\\ScriptHandler::createSymlinks"
+        ]
     },
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": true
-  }
+    "extra": {
+        "symlinks": {
+            "commerce_kickstart.profile": "web/profiles/commerce_kickstart/commerce_kickstart.profile",
+            "commerce_kickstart.install": "web/profiles/commerce_kickstart/commerce_kickstart.install",
+            "commerce_kickstart.info.yml": "web/profiles/commerce_kickstart/commerce_kickstart.info.yml",
+            "commerce_kickstart.links.menu.yml": "web/profiles/commerce_kickstart/commerce_kickstart.links.menu.yml",
+            "commerce_kickstart.services.yml": "web/profiles/commerce_kickstart/commerce_kickstart.services.yml",
+            "src": "web/profiles/commerce_kickstart/src",
+            "modules": "web/profiles/commerce_kickstart/modules",
+            "themes": "web/profiles/commerce_kickstart/themes",
+            "config/install": "web/profiles/commerce_kickstart/config/install",
+            "config/optional": "web/profiles/commerce_kickstart/config/optional",
+            "content": "web/profiles/commerce_kickstart/content"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./web"
+            },
+            "overwrite": true,
+            "file-mapping": {
+                "[web-root]/sites/default/settings.php": "assets/settings.php",
+                "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php"
+            }
+        },
+        "installer-name": "commerce_kickstart",
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/profiles/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/libraries/jquery-ui-touch-punch": ["npm-asset/jquery-ui-touch-punch"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "drupal/commerce": {
+                "#3089040 - Single product with multiple variation types": "https://git.drupalcode.org/project/commerce/-/merge_requests/25.patch",
+                "#3209536 - Add negate and and/or functionality to order product variation types": "https://www.drupal.org/files/issues/2021-04-19/commerce-negate-and-or-conditions-order-product-variation-types-3209536-2.patch"
+            }
+        }
+    }
 }
