@@ -5,6 +5,7 @@ config:
   php: '8.0'
   via: nginx
   database: mariadb:10.4
+  xdebug: true
 
 services:
   appserver:
@@ -28,7 +29,7 @@ tooling:
     cmd:
       - /bin/sh -c "if [ -d web/sites/default ]; then chmod -R +w web/sites/default; fi"
       - cd "$LANDO_MOUNT" && composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
-      - cd "$LANDO_WEBROOT" && drush si commerce_kickstart --site-name='Commerce Kickstart' --site-mail='admin@example.com' --account-name='system' --account-mail='system@example.com' --account-pass='system' -y
+      - cd "$LANDO_WEBROOT" && drush -y si commerce_kickstart --site-name='Commerce Kickstart' --site-mail='admin@example.com' --account-name='system' --account-mail='system@example.com' --account-pass='system'
       - cd "$LANDO_WEBROOT" && drush ucrt admin --password="admin" --mail="admin@example.com"
       - cd "$LANDO_WEBROOT" && drush urol "administrator" admin
 
@@ -36,7 +37,13 @@ tooling:
     service: appserver
     description: Enable devel systems
     cmd: true
-      - cd "$LANDO_WEBROOT" && drush en devel field_ui views_ui menu_ui features_ui dblog contextual webprofiler masquerade
+      - cd "$LANDO_WEBROOT" && drush -y en devel field_ui views_ui menu_ui features_ui dblog contextual webprofiler masquerade
+
+  demo:
+    service: appserver
+    description: Enable devel systems
+    cmd: true
+      - cd "$LANDO_WEBROOT" && drush -y en commerce_demo
 
   update:
     service: appserver
