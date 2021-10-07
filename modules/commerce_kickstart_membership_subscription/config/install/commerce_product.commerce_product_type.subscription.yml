@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: subscription
+label: Subscription
+description: ''
+variationType: subscription_license
+multipleVariationTypes: false
+variationTypes: {  }
+multipleVariations: true
+injectVariationFields: false
+traits: {  }
+locked: false

@@ -1,0 +1,17 @@
+name: 'Commerce Kickstart Membership Subscription'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'commerce:commerce'
+  - 'commerce:commerce_price'
+  - 'commerce:commerce_product'
+  - 'commerce_kickstart_license:commerce_kickstart_license'
+  - 'commerce_kickstart_product:commerce_kickstart_product'
+  - 'commerce_kickstart_recurring:commerce_kickstart_recurring'
+  - 'commerce_license:commerce_license'
+  - 'drupal:field'
+  - 'drupal:image'
+  - 'drupal:path'
+  - 'drupal:text'
+  - 'field_group:field_group'
+package: 'Commerce Kickstart'

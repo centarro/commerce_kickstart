@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.subscription_license
+    - field.storage.commerce_product_variation.billing_schedule
+id: commerce_product_variation.subscription_license.billing_schedule
+field_name: billing_schedule
+entity_type: commerce_product_variation
+bundle: subscription_license
+label: 'Billing schedule'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_billing_schedule'
+  handler_settings: {  }
+field_type: entity_reference

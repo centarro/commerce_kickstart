@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.subscription_license
+    - field.field.commerce_product_variation.subscription_license.billing_schedule
+    - field.field.commerce_product_variation.subscription_license.license_expiration
+    - field.field.commerce_product_variation.subscription_license.license_type
+    - field.field.commerce_product_variation.subscription_license.subscription_type
+  module:
+    - commerce
+    - commerce_price
+    - field_group
+third_party_settings:
+  field_group:
+    group_inventory:
+      children:
+        - sku
+        - list_price
+        - price
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Inventory
+    group_subscription:
+      children:
+        - license_type
+        - billing_schedule
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Subscription
+id: commerce_product_variation.subscription_license.default
+targetEntityType: commerce_product_variation
+bundle: subscription_license
+mode: default
+content:
+  billing_schedule:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  license_type:
+    type: commerce_plugin_radios
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  list_price:
+    type: commerce_list_price
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  license_expiration: true
+  subscription_type: true
+  uid: true

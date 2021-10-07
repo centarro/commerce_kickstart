@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.subscription_license
+    - field.storage.commerce_product_variation.license_type
+  module:
+    - commerce
+id: commerce_product_variation.subscription_license.license_type
+field_name: license_type
+entity_type: commerce_product_variation
+bundle: subscription_license
+label: 'License Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_plugin_id: role
+    target_plugin_configuration:
+      license_role: member
+default_value_callback: null
+settings: {  }
+field_type: 'commerce_plugin_item:commerce_license_type'

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.subscription_license
+    - field.storage.commerce_product_variation.license_expiration
+  module:
+    - commerce
+id: commerce_product_variation.subscription_license.license_expiration
+field_name: license_expiration
+entity_type: commerce_product_variation
+bundle: subscription_license
+label: 'License Expiration'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_plugin_id: unlimited
+    target_plugin_configuration: {  }
+default_value_callback: null
+settings: {  }
+field_type: 'commerce_plugin_item:recurring_period'

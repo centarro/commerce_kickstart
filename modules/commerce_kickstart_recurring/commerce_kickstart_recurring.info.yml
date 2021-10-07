@@ -1,0 +1,12 @@
+name: 'Commerce Kickstart Recurring'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'commerce:commerce'
+  - 'commerce:commerce_order'
+  - 'commerce:commerce_product'
+  - 'commerce:commerce_tax'
+  - 'commerce_kickstart_license:commerce_kickstart_license'
+  - 'commerce_recurring:commerce_recurring'
+  - 'drupal:field'
+package: 'Commerce Kickstart'

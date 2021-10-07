@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_product
+      - commerce_recurring
+label: 'Recurring (Product variation)'
+id: recurring_product_variation
+purchasableEntityType: commerce_product_variation
+orderType: recurring
+traits: {  }
+locked: true

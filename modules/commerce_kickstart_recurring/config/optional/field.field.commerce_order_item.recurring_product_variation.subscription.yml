@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.recurring_product_variation
+    - field.storage.commerce_order_item.subscription
+id: commerce_order_item.recurring_product_variation.subscription
+field_name: subscription
+entity_type: commerce_order_item
+bundle: recurring_product_variation
+label: Subscription
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_subscription'
+  handler_settings: {  }
+field_type: entity_reference
