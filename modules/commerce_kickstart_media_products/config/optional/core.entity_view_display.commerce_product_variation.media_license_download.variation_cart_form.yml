@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.media_license_download
+    - core.entity_view_mode.commerce_product_variation.variation_cart_form
+    - field.field.commerce_product_variation.media_license_download.commerce_file
+    - field.field.commerce_product_variation.media_license_download.license_expiration
+    - field.field.commerce_product_variation.media_license_download.license_type
+  module:
+    - commerce_price
+    - commerce_variation_cart_form
+third_party_settings:
+  commerce_variation_cart_form:
+    combine: 0
+id: commerce_product_variation.media_license_download.variation_cart_form
+targetEntityType: commerce_product_variation
+bundle: media_license_download
+mode: variation_cart_form
+content:
+  commerce_variation_cart_form:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  list_price:
+    type: commerce_price_default
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  sku:
+    type: string
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  commerce_file: true
+  license_expiration: true
+  license_type: true
+  product_id: true
+  search_api_excerpt: true
+  uk_tax_rate: true

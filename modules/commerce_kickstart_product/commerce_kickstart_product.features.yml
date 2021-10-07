@@ -1,0 +1,6 @@
+bundle: commerce_kickstart
+excluded:
+  - core.entity_form_display.commerce_order_item.physical_product.default
+  - core.entity_form_display.commerce_order_item.physical_product.variation_cart_form
+  - views.view.basic_product_catalog
+required: true

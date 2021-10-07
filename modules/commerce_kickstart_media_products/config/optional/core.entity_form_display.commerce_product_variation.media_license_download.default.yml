@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.media_license_download
+    - field.field.commerce_product_variation.media_license_download.commerce_file
+    - field.field.commerce_product_variation.media_license_download.license_expiration
+    - field.field.commerce_product_variation.media_license_download.license_type
+  module:
+    - commerce
+    - commerce_price
+    - file
+id: commerce_product_variation.media_license_download.default
+targetEntityType: commerce_product_variation
+bundle: media_license_download
+mode: default
+content:
+  commerce_file:
+    type: file_generic
+    weight: 91
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  license_expiration:
+    type: commerce_plugin_select
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  license_type:
+    type: commerce_plugin_select
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  list_price:
+    type: commerce_list_price
+    weight: -1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 90
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uk_tax_rate:
+    weight: 92
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_tax_rate_default
+    region: content
+hidden:
+  created: true
+  uid: true

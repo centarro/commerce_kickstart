@@ -1,12 +1,40 @@
 name: Commerce Kickstart
 type: profile
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9
 description: 'Install with Drupal Commerce pre-configured.'
 distribution:
   name: 'Commerce Kickstart'
 
+# Dependencies cannot be uninstalled.
 dependencies:
-  # Standard
+  # Kickstart
+  - commerce_kickstart_core
+  - commerce_kickstart_site
+
+  # Commerce
+  - address
+  - entity
+  - profile
+  - inline_entity_form
+  - state_machine
+  - commerce
+  - commerce_log
+  - commerce_checkout
+  - commerce_cart
+  - commerce_order
+  - commerce_product
+  - commerce_price
+  - commerce_store
+  - commerce_payment
+  - commerce_promotion
+  - commerce_tax
+
+  # Contrib
+
+
+# Module installed during profile install, but can be uninstalled later.
+install:
+  # Core
   - node
   - history
   - big_pipe
@@ -35,40 +63,14 @@ dependencies:
   - shortcut
   - toolbar
   - field_ui
-  - file
-  - rdf
-  - views
   - views_ui
   - tour
   - automated_cron
 
-  # Commerce
-  - address
-  - entity
-  - profile
-  - inline_entity_form
-  - state_machine
-  - commerce
-  - commerce_log
-  - commerce_checkout
-  - commerce_cart
-  - commerce_order
-  - commerce_product
-  - commerce_price
-  - commerce_store
-  - commerce_payment
-  - commerce_promotion
-  - commerce_tax
-
   # Contrib
   - admin_toolbar
-  - swiftmailer
-  - taxonomy_menu
   - facets
   - facets_pretty_paths
-  - search_api
-  - search_api_db
-  - commerce_demo
 
 themes:
   - belgrade

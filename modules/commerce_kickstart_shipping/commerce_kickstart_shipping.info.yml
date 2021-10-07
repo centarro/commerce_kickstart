@@ -1,0 +1,10 @@
+name: 'Commerce Kickstart Shipping'
+description: 'Shipping Configuration'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'commerce:commerce_product'
+  - 'commerce_shipping:commerce_shipping'
+  - 'drupal:field'
+  - 'physical:physical'
+package: 'Commerce Kickstart'

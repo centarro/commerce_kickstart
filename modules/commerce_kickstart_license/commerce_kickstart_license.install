@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for Kickstart Shipping.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function commerce_kickstart_license_install($is_syncing) {
+  $config_factory = \Drupal::configFactory();
+
+  // Disable Guest Checkout on default and shipping flows if they exist.
+  if ($config = $config_factory->getEditable("commerce_checkout.commerce_checkout_flow.default")) {
+    $config->set('configuration.panes.login.allow_guest_checkout', FALSE);
+    $config->set('configuration.panes.login.allow_registration', TRUE);
+    $config->save();
+  }
+
+  if ($config = $config_factory->getEditable("commerce_checkout.commerce_checkout_flow.shipping")) {
+    $config->set('configuration.panes.login.allow_guest_checkout', FALSE);
+    $config->set('configuration.panes.login.allow_registration', TRUE);
+    $config->save();
+  }
+}

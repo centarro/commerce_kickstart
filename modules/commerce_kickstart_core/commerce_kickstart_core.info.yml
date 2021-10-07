@@ -1,0 +1,5 @@
+name: Commerce Kickstart Core
+type: module
+description: Core Configuration for Commerce Kickstart
+package: Commerce Kickstart
+core_version_requirement: ^9

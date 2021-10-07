@@ -1,0 +1,12 @@
+name: 'Commerce Kickstart Basic Catalog'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - better_exposed_filters
+  - block
+  - commerce_kickstart_product
+  - commerce_product
+  - system
+  - taxonomy
+  - views
+package: 'Commerce Kickstart'

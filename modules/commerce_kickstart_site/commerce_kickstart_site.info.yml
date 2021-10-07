@@ -1,0 +1,5 @@
+name: Commerce Kickstart Site
+type: module
+description: Basic Site Configuration for Commerce Kickstart
+package: Commerce Kickstart
+core_version_requirement: ^9

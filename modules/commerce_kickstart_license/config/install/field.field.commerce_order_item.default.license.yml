@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.default
+    - field.storage.commerce_order_item.license
+id: commerce_order_item.default.license
+field_name: license
+entity_type: commerce_order_item
+bundle: default
+label: License
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_license'
+  handler_settings: {  }
+field_type: entity_reference

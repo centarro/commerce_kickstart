@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: physical_goods
+label: 'Physical (Product variation)'
+id: physical_product
+purchasableEntityType: commerce_product_variation
+orderType: default
+traits: {  }
+locked: false

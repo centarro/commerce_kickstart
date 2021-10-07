@@ -1,0 +1,11 @@
+name: 'Commerce Kickstart License'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'commerce:commerce'
+  - 'commerce:commerce_order'
+  - 'commerce:commerce_product'
+  - 'commerce:commerce_tax'
+  - 'commerce_license:commerce_license'
+  - 'drupal:field'
+package: 'Commerce Kickstart'

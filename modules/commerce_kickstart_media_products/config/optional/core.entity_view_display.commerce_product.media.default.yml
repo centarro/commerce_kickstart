@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.media
+    - field.field.commerce_product.media.body
+    - field.field.commerce_product.media.images
+    - field.field.commerce_product.media.product_brand
+    - field.field.commerce_product.media.product_collections
+    - field.field.commerce_product.media.product_tags
+  module:
+    - image
+    - text
+id: commerce_product.media.default
+targetEntityType: commerce_product
+bundle: media
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  images:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  product_brand:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      view_mode: variation_cart_form
+      link: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  product_collections: true
+  product_tags: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

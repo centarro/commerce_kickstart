@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.variation_cart_form
+label: 'Variation Cart Form'
+targetEntityType: commerce_product_variation
+cache: true

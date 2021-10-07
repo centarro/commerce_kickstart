@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Tags'
+vid: product_tags
+description: 'Tags are searchable keywords that you can associate with your product.'
+weight: 0
