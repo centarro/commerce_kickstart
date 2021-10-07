@@ -11,7 +11,8 @@
 function commerce_kickstart_shipping_install($is_syncing) {
   $config_factory = \Drupal::configFactory();
 
-  if ($config = $config_factory->getEditable("commerce_order.commerce_order_type.default")) {
+  if (in_array('commerce_order.commerce_order_type.default', $config_factory->listAll('commerce_order'))) {
+    $config = $config_factory->getEditable("commerce_order.commerce_order_type.default");
     $config->set('third_party_settings.commerce_checkout.checkout_flow', 'shipping');
     $config->set('third_party_settings.commerce_shipping.shipment_type', 'default');
     $config->save();
