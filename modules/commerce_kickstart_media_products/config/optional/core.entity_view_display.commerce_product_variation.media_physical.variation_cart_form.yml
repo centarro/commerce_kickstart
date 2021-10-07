@@ -4,6 +4,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.media_physical
     - core.entity_view_mode.commerce_product_variation.variation_cart_form
+    - field.field.commerce_product_variation.media_physical.weight
   module:
     - commerce_price
     - commerce_variation_cart_form
@@ -57,3 +58,4 @@ content:
 hidden:
   product_id: true
   search_api_excerpt: true
+  weight: true
