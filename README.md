@@ -93,7 +93,7 @@ COMMERCIAL SUPPORT
 Centarro offers a full range of consulting and support services for merchants
 doing business on Drupal Commerce, includiung managed hosting, maintenance,
 and support for Commerce Kickstart sites. For more information, contact
-Centarro at info@centarro.io or via their website, https://www.centarro.io.
+Centarro at info@centarro.io or via contact form on https://www.centarro.io.
 
 MAINTAINERS
 -----------
@@ -104,7 +104,7 @@ Current maintainers:
  * Jonathan Sacksick (jsacksick) - https://www.drupal.org/u/jsacksick
 
 This project has been sponsored by:
- * Centarro (https://www.drupal.org/centarro)
-   Centarro is building the future of commerce without compromise. As the
-   creators and maintainers of Drupal Commerce, our products and services
-   are designed to help you build with confidence on our platform.
+ * Centarro (https://www.drupal.org/centarro) - Centarro is building the future
+   of commerce without compromise. As the creators and maintainers of Drupal
+   Commerce, our products and services are designed to help you build with
+   confidence on our platform.
