@@ -61,7 +61,7 @@ to any other Drupal 9.x project template.
 For full instructions look at [centarro/kickstart-project](https://github.com/centarro/kickstart-project).
 
 ```
-composer create-project centarro/kickstart-project
+composer create-project centarro/commerce-kickstart-project
 ```
 
 We recommend you use either [Lando](https://lando.dev/) or [DDEV](https://github.com/drud/ddev) for local development.
