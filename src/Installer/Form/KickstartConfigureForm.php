@@ -103,8 +103,8 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
         'title' => t('Physical'),
         'description' => t('Do you have physical products that you ship?'),
       ],
-      'commerce_kickstart_media' => [
-        'title' => t('Media'),
+      'commerce_kickstart_media_product' => [
+        'title' => t('Media Products'),
         'description' => t('Do you have multi-format media products that you ship or are available for download?'),
       ],
       'commerce_kickstart_basic_catalog' => [
