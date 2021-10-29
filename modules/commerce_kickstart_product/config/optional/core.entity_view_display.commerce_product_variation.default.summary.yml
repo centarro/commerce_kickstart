@@ -14,33 +14,31 @@ targetEntityType: commerce_product_variation
 bundle: default
 mode: summary
 content:
-  price:
+  list_price:
+    label: above
     type: commerce_price_default
-    weight: 2
+    weight: -1
     region: content
-    label: hidden
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
-  sku:
-    type: string
+  product_id:
+    type: entity_reference_label
     weight: 0
-    region: content
-    label: inline
+    label: hidden
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
+    region: content
   title:
     label: hidden
     type: string
-    weight: 1
+    weight: -5
     settings:
       link_to_entity: false
     third_party_settings: {  }
     region: content
 hidden:
-  commerce_variation_cart_form: true
-  list_price: true
-  product_id: true
-  search_api_excerpt: true
+  price: true
+  sku: true

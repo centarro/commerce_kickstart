@@ -9,7 +9,6 @@ dependencies:
       - commerce_cart
       - commerce_product
   module:
-    - commerce_order
     - commerce_product
 id: commerce_order_item.default.add_to_cart
 targetEntityType: commerce_order_item
@@ -22,16 +21,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  quantity:
-    type: commerce_quantity
-    weight: 1
-    region: content
-    settings:
-      placeholder: ''
-      step: '1'
-    third_party_settings: {  }
 hidden:
   created: true
+  quantity: true
   status: true
   uid: true
   unit_price: true
