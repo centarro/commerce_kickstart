@@ -99,16 +99,20 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
    */
   private function getFeatures(): array {
     return [
-      'commerce_kickstart_physical' => [
-        'title' => t('Physical'),
+      'commerce_kickstart_physical_product' => [
+        'title' => t('Physical Products'),
         'description' => t('Do you have physical products that you ship?'),
       ],
       'commerce_kickstart_media_product' => [
         'title' => t('Media Products'),
         'description' => t('Do you have multi-format media products that you ship or are available for download?'),
       ],
+      'commerce_kickstart_membership_subscription' => [
+        'title' => t('Membership Subscriptions'),
+        'description' => t('Sell membership to your site with role based subscriptions.'),
+      ],
       'commerce_kickstart_basic_catalog' => [
-        'title' => t('Media'),
+        'title' => t('Basic Catalogue'),
         'description' => t('Enable a basic catalog listing page for your products.'),
       ],
       'commerce_kickstart_content' => [

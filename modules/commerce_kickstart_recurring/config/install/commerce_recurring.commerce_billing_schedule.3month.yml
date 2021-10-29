@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: 3month
 label: Quaterly
-displayLabel: Quaterly
+displayLabel: Quarterly
 billingType: prepaid
 retrySchedule:
   - 1
