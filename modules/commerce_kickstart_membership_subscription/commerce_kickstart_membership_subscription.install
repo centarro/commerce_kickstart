@@ -16,11 +16,11 @@
  */
 function commerce_kickstart_membership_subscription_install($is_syncing) {
 
-  /** @var \Drupal\user\RoleStorageInterface $role_storage */
-  $role_storage = \Drupal::entityTypeManager()->getStorage('role');
+  /** @var \Drupal\user\RoleStorageInterface $user_role_storage */
+  $user_role_storage = \Drupal::entityTypeManager()->getStorage('user_role');
 
-  if (!$role_storage->load('member')) {
-    $role = $role_storage->create(['id' => 'member', 'label' => 'Member']);
+  if (!$user_role_storage->load('member')) {
+    $role = $user_role_storage->create(['id' => 'member', 'label' => 'Member']);
     $role->save();
   }
 
