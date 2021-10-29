@@ -54,23 +54,23 @@ ecosystem that are compatible with Drupal 9.
 INSTALLATION
 ------------
 
-As drupal.org does not fully support distribution or installation profile
-installation via Composer, we recommend the following installation process in
-a local development environment with git, Composer 2, and ddev:
+Drupal.org only supports distribution installation via Composer, we recommend
+using our project template, but you can also add Commerce Kickstart as a requirement
+to any other Drupal 9.x project template.
 
- 1. `git clone --branch '3.x' https://git.drupalcode.org/project/commerce_kickstart.git`
- 2. `cd commerce_kickstart`
- 3. `composer install` (note that this will symlink the installation profile
-    files into the `web/profiles/commerce_kickstart` directory per instructions
-    in the `composer.json` file)
- 4. `ddev config` (using `commerce-kickstart` as the project name, `web` as the
-    docroot location, and `drupal9` as the project type)
- 5. `ddev start`
+For full instructions look at [centarro/kickstart-project](https://github.com/centarro/kickstart-project).
 
-You can now test Commerce Kickstart by opening the link ddev provides! Consider
-starting with the full Commerce Demo store to see everything the distribution
-provides. We include drush in the project, so when you're ready to delete the
-database and try a different installation path, use `ddev exec drush sql-drop`.
+```
+composer create-project centarro/kickstart-project
+```
+
+We recommend you use either [Lando](https://lando.dev/) or [DDEV](https://github.com/drud/ddev) for local development.
+
+| Lando                    | Ddev                    |
+|--------------------------|-------------------------|
+| `lando init`             | `ddev config`           |
+| `lando start`            | `ddev start`            |
+| `lando composer install` | `ddev composer install` |
 
 Any of that confusing? We partnered with SimplyTest.me to create a one-click
 installer in a temporary web environment for more casual evaluation. Just
