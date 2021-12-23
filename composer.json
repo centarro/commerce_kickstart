@@ -11,6 +11,13 @@
         "sort-packages": true,
         "preferred-install": {
             "drupal/core": "dist"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
         }
     },
     "repositories": [
@@ -29,21 +36,23 @@
     ],
     "require": {
         "drupal/admin_toolbar": "^3.0",
-        "drupal/belgrade": "^2.0",
+        "drupal/belgrade": "2.0.x-dev",
         "drupal/better_exposed_filters": "^5.0@beta",
-        "drupal/commerce": "^2.0",
+        "drupal/commerce": "3.0.x-dev",
         "drupal/commerce_file": "^2.0@beta",
         "drupal/commerce_product_tax": "^1.0@RC",
         "drupal/commerce_recurring": "^1.0@beta",
         "drupal/commerce_shipping": "^2.1",
-        "drupal/commerce_variation_cart_form": "^1.2",
+        "drupal/commerce_variation_cart_form": "1.x-dev",
         "drupal/core_views_facets": "^1.2",
         "drupal/facets_pretty_paths": "^1.1",
         "drupal/field_group": "^3.2",
         "drupal/jquery_ui_touch_punch": "^1.0",
+        "drupal/select2": "^1.13",
         "drupal/swiftmailer": "^2.0",
         "drupal/token": "^1.0",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
+        "npm-asset/select2": "^4.0",
         "oomphinc/composer-installers-extender": "^2.0"
     },
     "require-dev": {
@@ -133,7 +142,8 @@
         "patches": {
             "drupal/commerce": {
                 "#3089040 - Single product with multiple variation types": "https://git.drupalcode.org/project/commerce/-/merge_requests/25.patch",
-                "#3209536 - Add negate and and/or functionality to order product variation types": "https://www.drupal.org/files/issues/2021-04-19/commerce-negate-and-or-conditions-order-product-variation-types-3209536-2.patch"
+                "#3209536 - Add negate and and/or functionality to order product variation types": "https://www.drupal.org/files/issues/2021-04-19/commerce-negate-and-or-conditions-order-product-variation-types-3209536-2.patch",
+                "#3170412 - Allow a store to always collect a billing address before payment method selection": "https://www.drupal.org/files/issues/2021-12-22/commerce-Billing_address_before_payment-3170412-29.patch"
             }
         }
     }
