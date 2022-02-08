@@ -9,7 +9,7 @@ dependencies:
     - field.field.commerce_product.media.product_collections
     - field.field.commerce_product.media.product_tags
   module:
-    - image
+    - commerce_product
     - text
 id: commerce_product.media.default
 targetEntityType: commerce_product
@@ -17,48 +17,39 @@ bundle: media
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
-  images:
-    weight: 0
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
+    weight: 2
     region: content
   product_brand:
-    weight: 1
+    type: entity_reference_label
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 10
     region: content
   title:
-    label: hidden
     type: string
-    weight: 2
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  variations:
-    type: entity_reference_entity_view
-    weight: 4
+    weight: 1
     region: content
+  variations:
+    type: commerce_add_to_cart
     label: hidden
     settings:
-      view_mode: variation_cart_form
-      link: false
+      combine: true
     third_party_settings: {  }
+    weight: 4
+    region: content
 hidden:
   created: true
+  images: true
   product_collections: true
   product_tags: true
   search_api_excerpt: true

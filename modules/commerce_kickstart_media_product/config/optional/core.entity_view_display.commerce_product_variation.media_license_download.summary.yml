@@ -7,11 +7,6 @@ dependencies:
     - field.field.commerce_product_variation.media_license_download.commerce_file
     - field.field.commerce_product_variation.media_license_download.license_expiration
     - field.field.commerce_product_variation.media_license_download.license_type
-  module:
-    - commerce_variation_cart_form
-third_party_settings:
-  commerce_variation_cart_form:
-    combine: 0
 id: commerce_product_variation.media_license_download.summary
 targetEntityType: commerce_product_variation
 bundle: media_license_download
@@ -19,12 +14,12 @@ mode: summary
 content:
   title:
     type: string
-    weight: 0
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   commerce_file: true
   commerce_variation_cart_form: true

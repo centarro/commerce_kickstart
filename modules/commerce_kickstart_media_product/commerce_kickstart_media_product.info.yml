@@ -11,7 +11,6 @@ dependencies:
   - 'commerce_kickstart_shipping:commerce_kickstart_shipping'
   - 'commerce_license:commerce_license'
   - 'commerce_product_tax:commerce_product_tax'
-  - 'commerce_variation_cart_form:commerce_variation_cart_form'
   - 'drupal:field'
   - 'drupal:file'
   - 'drupal:image'

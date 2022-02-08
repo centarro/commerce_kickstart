@@ -9,25 +9,22 @@ dependencies:
     - field.field.commerce_product_variation.media_license_download.license_type
   module:
     - commerce_price
-    - commerce_variation_cart_form
     - field_group
 third_party_settings:
-  commerce_variation_cart_form:
-    combine: 0
   field_group:
     group_pdf_download:
       children:
         - price
+      label: Download
       parent_name: ''
+      region: content
       weight: 0
       format_type: fieldset
-      region: content
       format_settings:
-        description: ''
-        id: ''
         classes: ''
         show_empty_fields: false
-      label: Download
+        id: ''
+        description: ''
 id: commerce_product_variation.media_license_download.teaser
 targetEntityType: commerce_product_variation
 bundle: media_license_download
@@ -35,13 +32,13 @@ mode: teaser
 content:
   price:
     type: commerce_price_default
-    weight: 0
-    region: content
     label: hidden
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   commerce_file: true
   commerce_variation_cart_form: true
