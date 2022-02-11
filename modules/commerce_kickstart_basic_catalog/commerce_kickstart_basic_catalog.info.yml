@@ -2,11 +2,11 @@ name: 'Commerce Kickstart Basic Catalog'
 type: module
 core_version_requirement: '^8.9 || ^9'
 dependencies:
-  - better_exposed_filters
-  - block
-  - commerce_kickstart_product
-  - commerce_product
-  - system
-  - taxonomy
-  - views
+  - 'better_exposed_filters:better_exposed_filters'
+  - 'commerce_kickstart_product:commerce_kickstart_product'
+  - 'commerce_product:commerce_product'
+  - 'drupal:block'
+  - 'drupal:system'
+  - 'drupal:taxonomy'
+  - 'drupal:views'
 package: 'Commerce Kickstart'

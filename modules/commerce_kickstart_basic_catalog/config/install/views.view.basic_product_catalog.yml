@@ -302,6 +302,7 @@ display:
           exposed: false
           expose:
             label: ''
+            field_identifier: title
           entity_type: commerce_product
           entity_field: title
           plugin_id: standard
