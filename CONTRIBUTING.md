@@ -4,103 +4,60 @@
 
 * Introduction
 * Requirements
-* Getting Started
-* Dev with Lando
+* Getting started
+* Using DDEV-Local
 
 ## Introduction
 
-[Creating Issue forks and merge requests](https://www.drupal.org/docs/develop/git/using-git-to-contribute-to-drupal/creating-issue-forks-and-merge-requests)
+We tend to prefer reviewing contributions in the form of patches posted to the
+Commerce Kickstart issue queue. However, drupal.org does support GitLab based
+merge requests if desired: [Creating Issue forks and merge requests](https://www.drupal.org/docs/develop/git/using-git-to-contribute-to-drupal/creating-issue-forks-and-merge-requests)
 
 ## Requirements
 
-We recommend using [Lando](https://docs.lando.dev/) for local development
+We recommend using [DDEV-Local](https://github.com/drud/ddev) for local development,
+but any local development environment that meets Drupal 9 system requirements
+and has Composer installed will do. While not a requirement, we strongly
+recommend using DDEV-Local with mutagen enabled, which can be done per project
+or globally for all of your projects via:
 
-## Getting Started
+```shell
+ddev config global --mutagen-enabled
+```
+
+## Getting started
 
 ```shell
 git clone git@git.drupal.org:project/commerce_kickstart.git
 cd commerce_kickstart
-lando start
-lando install
-lando demo
+composer install
+ddev config
+ddev start
 ```
 
-## Dev with Lando
+## Using DDEV-Local
 
-Lando vastly simplifies local development and DevOps, so you can focus on what's important.
+DDEV-Local dramatically simplifies construction of a fully capable development
+environment. It uses Docker to provide you with a router, web server, database,
+and other services as desired. It supports XDebug for PHP debugging in a
+compatible IDE and Mutagen for file synchronization, dramatically improving the
+performance of Drupal in local environments.
 
-### Lando Services
+It offers phpMyAdmin for browser based database inspection / administration or
+integration with Sequel Pro if you prefer a native application. It traps email
+sent via SMTP 127.0.0.1:1025, using MailHog to provide a browser based UI for
+reviewing the email your site sends.
 
-#### XDebug
+Read more about all of the above and more at: https://ddev.readthedocs.io/
 
-XDebug is included, find out how to [set up Lando + XDebug with PhpStorm](https://docs.lando.dev/guides/lando-phpstorm.html#lando-phpstorm-xdebug)
+## Maintaining Commerce Kickstart
 
-#### Mailhog
-
-Mailhog is preconfigured to catch all emails. When you run `lando start` the URL for Mailhog will be displayed.
-
-### Lando Tooling
-
-#### Standard Lando Tooling
-
-You get all the usual Lando commands to start, stop and rebuild your local environment.
-Simple run `lando` to see all available commands
+In order to support installation of Commerce Kickstart via:
 
 ```shell
-lando start
-lando stop
-lando rebuild
-ladno poweroff
+composer require centarro/commerce_kickstart:^3.0
 ```
 
-#### Drupal Tooling
-
-```shell
-lando drush <command>
-lando composer <command>
-```
-
-#### Commerce Kickstart Tooling
-
-```shell
-lando install
-```
-
-Installs a fresh Commerce Kickstart site
-
-| Username | Roles         | Password |
-|----------|---------------|----------|
-| system   | User 1        | system   |
-| admin    | administrator | admin    |
-
-```shell
-lando devel
-```
-
-Installs Devel and UI Modules for Drupal
-
-```shell
-lando demo
-```
-
-Installs Commerce Demo module
-
-```shell
-lando update
-```
-
-Runs `composer update` and `drush updb`
-
-```shell
-lando phpunit
-lando phpstan
-lando phpcs
-```
-
-Run tests, static code analysis and code sniffer.
-
-```shell
-lando soften
-```
-
-Soften the Drupal installation, i.e. revert the hardening done by the Drupal installer.
+All commits to the primary project repository on drupal.org must be mirrored
+to GitHub. If you have access to the project on GitHub, ensure that you have
+added it as a remote and push all commits to it in addition to drupal.org.

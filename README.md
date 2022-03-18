@@ -12,14 +12,13 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-Commerce Kickstart 3.x is the quickest way to get started with Drupal Commerce
-on Drupal 9. It provides an installation profile for installing Drupal 9,
-Commerce Core, and the Centarro Commerce contributed modules and themes.
+Commerce Kickstart is the fastest way to start building on Drupal Commerce. It
+includes an installation profile for installing Drupal 9, Commerce Core, and
+the Centarro Commerce contributed modules and themes.
 
-The installer includes optional steps where you have the choice to install
-either the full Commerce Demo store or to install specific store configuration
-modules provided by the profile. The Commerce Demo store should *not* be used
-for building a live site.
+The installer includes an additional step where you can install either a full
+demo store for evaluation purposes or enable the individual features you need
+to start building and launch your store today!
 
  * For a full description of the distribution, visit the project page:
    https://www.drupal.org/project/commerce_kickstart
@@ -34,50 +33,78 @@ for building a live site.
 REQUIREMENTS
 ------------
 
-Your development and hosting environments must be capable of running Drupal 9.
+Your development and hosting environments must be capable of running Drupal 9:
 
-Commerce Kickstart 3.x must be installed via Composer in order to pull in a
-wide variety of contributed modules and other dependencies.
+https://www.drupal.org/docs/system-requirements
+
+We strongly recommend using DDEV-Local for local development and a Drupal
+optimized Platform-as-a-Service (e.g. Acquia, Pantheon, or Platform.sh) for
+hosting your site. Centarro offers consulting, development, and managed
+services if you need help deciding how to build, launch, or run your store.
+
+Commerce Kickstart must be installed and updated via Composer to properly build
+the codebase and fetch new versions of Drupal and third-party dependencies.
 
 RECOMMENDED MODULES
 -------------------
 
-Commerce Kickstart 3.x includes all of the Centarro Commerce contributed
-modules. These are maintained by Centarro, the company behind Drupal Commerce,
-to conform to the same code, test, and documentation standards applied to
-Commerce Core itself.
+Commerce Kickstart includes all of the Centarro Commerce contributed modules.
+These are maintained by Centarro, the company behind Drupal Commerce, to
+conform to the same development and documentation standards as Commerce Core.
 
-Additional contributed Commerce modules and themes may be added as needed to
-build out your store. Search for modules on drupal.org in the Commerce Core
-ecosystem that are compatible with Drupal 9.
+Additional Drupal modules and themes may be installed via Composer to add new
+features to your store. Search for modules compatible with Drupal 9 on
+drupal.org to see what's available, and filter your search results to those in
+the Commerce Core ecosystem to find modules that extend Drupal Commerce.
 
 INSTALLATION
 ------------
 
-Drupal.org only supports distribution installation via Composer, we recommend
-using our project template, but you can also add Commerce Kickstart as a requirement
-to any other Drupal 9.x project template.
+We recommend installing with our Composer project template, but you can also
+add Commerce Kickstart as a requirement to any Drupal 9.x project template. For
+full instructions, please refer to [centarro/commerce-kickstart-project](https://github.com/centarro/kickstart-project).
 
-For full instructions look at [centarro/kickstart-project](https://github.com/centarro/kickstart-project).
-
-```
-composer create-project centarro/commerce-kickstart-project
+```shell
+composer create-project centarro/commerce-kickstart-project kickstart
 ```
 
-We recommend you use either [Lando](https://lando.dev/) or [DDEV](https://github.com/drud/ddev) for local development.
+If creating a project of a pre-release or development version, use the -s flag
+to set the appropriate stability level:
 
-| Lando                    | Ddev                    |
-|--------------------------|-------------------------|
-| `lando init`             | `ddev config`           |
-| `lando start`            | `ddev start`            |
-| `lando composer install` | `ddev composer install` |
+```shell
+composer create-project -s dev centarro/commerce-kickstart-project kickstart
+```
 
-Any of that confusing? We partnered with SimplyTest.me to create a one-click
-installer in a temporary web environment for more casual evaluation. Just
-open https://simplytest.me in your browser and click *Drupal Commerce Demo*.
-After installation, you can log in as user 1 using `admin` as the username and
-password. These environments will be deleted after a short period of time, so
-do not build anything here you expect to use again!
+If you expect to install the full demo store, you will need to add the Commerce
+Demo module to your codebase. To do so, issue the two following commands:
+
+```shell
+cd kickstart
+composer require drupal/commerce_demo:^3.0
+```
+
+(Note: this only works when `commerce_demo` is installed using the `vcs` type
+repository definition provided by the project template or installation profile
+`composer.json` file. Attempting to install it from the Drupal package will
+result in dependency conflicts, as it interprets the `commerce_kickstart:*`
+dependencies in `commerce_kickstart.info.yml` as `drupal/commerce_kickstart`
+even though drupal.org does not currently support installation profiles.)
+
+We recommend and support [DDEV-Local](https://github.com/drud/ddev) for local development.
+Change into the newly created directory and use the following commands to
+launch the site:
+
+```shell
+ddev config
+ddev start
+```
+
+Just want a quick look? We partnered with SimplyTest.me to create a one-click
+installer in a temporary web environment for more casual evaluation. Browse to
+https://simplytest.me and click *Drupal Commerce Demo*. After installation, you
+can log in as user 1 using `admin` as the username and password. These
+environments will be deleted after a short period of time, so do not build
+anything here you expect to use again!
 
 CONFIGURATION
 -------------
@@ -99,7 +126,6 @@ MAINTAINERS
 -----------
 
 Current maintainers:
- * David Kitchen (dwkitchen) - https://www.drupal.org/u/dwkitchen
  * Ryan Szrama (rszrama) - https://www.drupal.org/u/rszrama
  * Jonathan Sacksick (jsacksick) - https://www.drupal.org/u/jsacksick
 
