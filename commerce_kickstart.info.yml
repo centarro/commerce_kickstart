@@ -71,6 +71,8 @@ install:
   - admin_toolbar
   - facets
   - facets_pretty_paths
+  - symfony_mailer
+  - symfony_mailer_bc
 
 themes:
   - belgrade

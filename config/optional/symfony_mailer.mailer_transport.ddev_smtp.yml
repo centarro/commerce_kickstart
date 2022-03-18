@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ddev_smtp
+label: 'ddev SMTP'
+plugin: smtp
+configuration:
+  user: ''
+  pass: ''
+  host: 127.0.0.1
+  port: 1025

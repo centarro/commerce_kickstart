@@ -49,7 +49,7 @@
         "drupal/field_group": "^3.2",
         "drupal/jquery_ui_touch_punch": "^1.0",
         "drupal/select2": "^1.13",
-        "drupal/swiftmailer": "^2.0",
+        "drupal/symfony_mailer": "^1.0@alpha",
         "drupal/token": "^1.0",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "npm-asset/select2": "^4.0",
