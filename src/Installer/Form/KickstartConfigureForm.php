@@ -33,26 +33,26 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
   }
 
   public function buildForm(array $form, FormStateInterface $form_state): array {
-    $form['#title'] = $this->t('Commerce Kickstart Features');
+    $form['#title'] = $this->t('Commerce Kickstart features');
 
     if($this->moduleExtensionList->exists('commerce_demo')) {
       $form['demo'] = [
         '#type' => 'fieldset',
-        '#title' => t('Commerce Kickstart Demo'),
+        '#title' => t('Complete store demo'),
       ];
 
       $form['demo']['install_demo'] = [
         '#type' => 'checkbox',
-        '#title' => t('Do you want to install the demo store?'),
-        '#description' => t('Shows you everything Commerce Kickstart can do. Includes a custom theme, sample content and products.'),
+        '#title' => t('Install all features with demo content.'),
+        '#description' => t('Great for seeing all that Drupal Commerce has to offer. Not recommended for a site you intend to take live.'),
         '#default_value' => FALSE,
       ];
     }
 
     $form['features'] = [
       '#type' => 'fieldset',
-      '#title' => t('Commerce Kickstart Features'),
-      '#description' => t('All features can also be installed at a later time'),
+      '#title' => t('Select starting features'),
+      '#description' => t('Features are small modules containing default configuration you can install now or at any point in the future.'),
       '#states' => [
         'visible' => [
           ':input[name="install_demo"]' => ['checked' => FALSE],
@@ -72,7 +72,7 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Save and continue'),
+      '#value' => $this->t('Continue installation'),
       '#button_type' => 'primary',
     ];
 
@@ -99,26 +99,26 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
    */
   private function getFeatures(): array {
     return [
-      'commerce_kickstart_physical_product' => [
-        'title' => t('Physical Products'),
-        'description' => t('Do you have physical products that you ship?'),
-      ],
-      'commerce_kickstart_media_product' => [
-        'title' => t('Media Products'),
-        'description' => t('Do you have multi-format media products that you ship or are available for download?'),
-      ],
-      'commerce_kickstart_membership_subscription' => [
-        'title' => t('Membership Subscriptions'),
-        'description' => t('Sell membership to your site with role based subscriptions.'),
-      ],
-      'commerce_kickstart_basic_catalog' => [
-        'title' => t('Basic Catalogue'),
-        'description' => t('Enable a basic catalog listing page for your products.'),
-      ],
       'commerce_kickstart_content' => [
         'title' => t('Content'),
-        'description' => t('Create static content pages'),
-      ]
+        'description' => t('Create informational pages using a basic content type.'),
+      ],
+      'commerce_kickstart_physical_product' => [
+        'title' => t('Physical products'),
+        'description' => t('Sell physical products, collect shipping information, and charge shipping fees in checkout.'),
+      ],
+      'commerce_kickstart_basic_catalog' => [
+        'title' => t('Basic catalog'),
+        'description' => t('Merchandise your products in a taxonomy based catalog with enhanced exposed filters.'),
+      ],
+      'commerce_kickstart_media_product' => [
+        'title' => t('Media products'),
+        'description' => t('Sell digital products with access controlled downloads, optionally combined with physical variants.'),
+      ],
+      'commerce_kickstart_membership_subscription' => [
+        'title' => t('Membership subscriptions'),
+        'description' => t('Sell site or organization memberships with role based subscriptions and recurring billing.'),
+      ],
     ];
   }
 

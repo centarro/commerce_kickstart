@@ -80,13 +80,13 @@ function commerce_kickstart_install_tasks(&$install_state): array {
   $tasks = [];
 
   $tasks['commerce_kickstart_install_configure_form'] = [
-    'display_name' => t('Select Features'),
+    'display_name' => t('Select features'),
     'type' => 'form',
     'function' => 'Drupal\commerce_kickstart\Installer\Form\KickstartConfigureForm',
   ];
 
   $tasks['commerce_kickstart_install_process'] = [
-    'display_name' => t('Install Features'),
+    'display_name' => t('Install features'),
     'type' => 'batch',
   ];
 
@@ -99,7 +99,7 @@ function commerce_kickstart_install_tasks(&$install_state): array {
  */
 function commerce_kickstart_install_tasks_alter(&$tasks, $install_state) {
   $tasks['install_profile_modules']['display_name'] = t('Install Commerce Kickstart');
-  $tasks['install_configure_form']['display_name'] = t('Configure Administration');
+  $tasks['install_configure_form']['display_name'] = t('Configure site');
   $tasks['install_finished']['function'] = 'commerce_kickstart_install_finished';
 }
 

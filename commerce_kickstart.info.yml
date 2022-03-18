@@ -1,7 +1,7 @@
 name: Commerce Kickstart
 type: profile
 core_version_requirement: ^9
-description: 'Install with Drupal Commerce pre-configured.'
+description: 'The fastest way to start building on Drupal Commerce.'
 distribution:
   name: 'Commerce Kickstart'
 
