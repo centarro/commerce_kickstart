@@ -15,7 +15,8 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function commerce_kickstart_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
   // Add a placeholder as example that one can choose an arbitrary site name.
-  $form['site_information']['site_name']['#attributes']['placeholder'] = t('My store');
+  $form['site_information']['site_name']['#attributes']['placeholder'] = t('Commerce Kickstart');
+  $form['regional_settings']['site_default_country']['#default_value'] = 'US';
   $form['#submit'][] = 'commerce_kickstart_form_install_configure_submit';
 }
 
