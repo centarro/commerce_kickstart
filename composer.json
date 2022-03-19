@@ -44,6 +44,7 @@
         "drupal/commerce_product_tax": "^1.0@RC",
         "drupal/commerce_recurring": "^1.0@beta",
         "drupal/commerce_shipping": "^2.1",
+        "drupal/config_split": "^2.0@beta",
         "drupal/core_views_facets": "^2.0",
         "drupal/facets_pretty_paths": "^1.2",
         "drupal/field_group": "^3.2",

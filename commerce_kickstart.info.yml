@@ -69,6 +69,7 @@ install:
 
   # Contrib
   - admin_toolbar
+  - config_split
   - facets
   - facets_pretty_paths
   - symfony_mailer

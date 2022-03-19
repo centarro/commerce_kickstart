@@ -32,6 +32,14 @@ $settings['file_scan_ignore_directories'] = [
 // This is defined inside the read-only "config" directory, deployed via Git.
 $settings['config_sync_directory'] = '../config/sync';
 
+// Enable DDEV-Local specific configuration if running in that environment.
+if (getenv('IS_DDEV_PROJECT') == 'true') {
+  $config['config_split.config_split.ddev']['status'] = TRUE;
+}
+else {
+  $config['config_split.config_split.ddev']['status'] = FALSE;
+}
+
 // Automatic Platform.sh settings.
 if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
