@@ -69,6 +69,7 @@ install:
 
   # Contrib
   - admin_toolbar
+  - admin_toolbar_tools
   - config_split
   - facets
   - facets_pretty_paths
