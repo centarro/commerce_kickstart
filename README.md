@@ -114,6 +114,18 @@ administrative interface. This distribution includes the Commerce Store Wizard
 module and a go-live checklist provided by the Centarro Toolbox module to guide
 you through various aspects of Drupal Commerce configuration.
 
+Commerce Kickstart includes the Config Splits module to support different
+configurations per environment. The default config directory created in the
+root project folder includes a splits subdirectory with a directory and config
+split specific to DDEV environments. After installing your site, if you are
+developing on DDEV, you can either import the DDEV specific configuration via
+the user interface at /admin/config/development/configuration/config-split or
+import via drush:
+
+```shell
+ddev drush config-split:import ddev
+```
+
 COMMERCIAL SUPPORT
 ------------------
 
