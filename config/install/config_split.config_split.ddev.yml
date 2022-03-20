@@ -8,7 +8,7 @@ description: 'Configuration for DDEV environments.'
 weight: 0
 stackable: false
 storage: folder
-folder: ../config/ddev
+folder: ../config/splits/ddev
 module: {  }
 theme: {  }
 complete_list: {  }
