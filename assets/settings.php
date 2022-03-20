@@ -1,15 +1,9 @@
 <?php
-/**
- * @file
- * Platform.sh example settings.php file for Drupal 8.
- */
 
-// Default Drupal 8 settings.
+// Default Drupal settings.
 //
 // These are already explained with detailed comments in Drupal's
 // default.settings.php file.
-//
-// See https://api.drupal.org/api/drupal/sites!default!default.settings.php/8
 $databases = [];
 $config_directories = [];
 $settings['update_free_access'] = FALSE;
@@ -18,6 +12,9 @@ $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
 ];
+$settings['entity_update_batch_size'] = 50;
+$settings['entity_update_backup'] = TRUE;
+$settings['migrate_node_migrate_type_classic'] = FALSE;
 
 // The hash_salt should be a unique random value for each application.
 // If left unset, the settings.platformsh.php file will attempt to provide one.
