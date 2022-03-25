@@ -4,6 +4,8 @@ core_version_requirement: ^9
 description: 'The fastest way to start building on Drupal Commerce.'
 distribution:
   name: 'Commerce Kickstart'
+  install:
+    theme: centarro_claro
 
 # Dependencies cannot be uninstalled.
 dependencies:
@@ -78,4 +80,5 @@ install:
 
 themes:
   - belgrade
+  - centarro_claro
   - seven

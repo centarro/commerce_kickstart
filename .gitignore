@@ -13,3 +13,6 @@ private/*
 
 # Ignore files created by Drupal
 config/sync
+
+# Ignore IDE files
+*.code-workspace

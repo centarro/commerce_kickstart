@@ -29,6 +29,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 // This is defined inside the read-only "config" directory, deployed via Git.
 $settings['config_sync_directory'] = '../config/sync';
 
+// Use Centarro Claro for update.php; should be unset if the site does not
+// keep the Centarro Claro admin theme installed.
+// @see https://github.com/centarro/centarro_claro
+$settings['maintenance_theme'] = 'centarro_claro';
+
 // Enable DDEV-Local specific configuration if running in that environment.
 if (getenv('IS_DDEV_PROJECT') == 'true') {
   $config['config_split.config_split.ddev']['status'] = TRUE;

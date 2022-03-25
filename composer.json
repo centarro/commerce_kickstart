@@ -35,6 +35,7 @@
         }
     ],
     "require": {
+        "centarro/centarro_claro": "1.x-dev",
         "drupal/admin_toolbar": "^3.0",
         "drupal/belgrade": "2.0.x-dev",
         "drupal/better_exposed_filters": "^5.0",
