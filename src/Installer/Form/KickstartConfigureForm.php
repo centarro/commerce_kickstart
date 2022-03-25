@@ -35,18 +35,21 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
   public function buildForm(array $form, FormStateInterface $form_state): array {
     $form['#title'] = $this->t('Commerce Kickstart features');
 
-    if($this->moduleExtensionList->exists('commerce_demo')) {
-      $form['demo'] = [
-        '#type' => 'fieldset',
-        '#title' => t('Complete store demo'),
-      ];
+    $form['demo'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Complete store demo'),
+    ];
 
+    if ($this->moduleExtensionList->exists('commerce_demo')) {
       $form['demo']['install_demo'] = [
         '#type' => 'checkbox',
-        '#title' => t('Install all features with demo content.'),
+        '#title' => t('Install all features with sample content.'),
         '#description' => t('Great for seeing all that Drupal Commerce has to offer. Not recommended for a site you intend to take live.'),
         '#default_value' => FALSE,
       ];
+    }
+    else {
+      $form['demo']['#description'] = t('Add the Commerce Demo module to your codebase and reload this page if you want to install a complete demo store with sample content: <p><pre>composer require drupal/commerce_demo:^3.0</pre></p>');
     }
 
     $form['features'] = [
