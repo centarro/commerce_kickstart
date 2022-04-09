@@ -39,7 +39,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/belgrade": "2.0.x-dev",
         "drupal/better_exposed_filters": "^5.0",
-        "drupal/commerce": "2.x-dev",
+        "drupal/commerce": "^2.30",
         "drupal/commerce_file": "^2.0@beta",
         "drupal/commerce_paypal": "^1.0@RC",
         "drupal/commerce_product_tax": "^1.0@RC",
@@ -142,9 +142,6 @@
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patches": {
-            "drupal/commerce": {
-                "#3209536 - Add negate and and/or functionality to order product variation types": "https://www.drupal.org/files/issues/2021-04-19/commerce-negate-and-or-conditions-order-product-variation-types-3209536-2.patch"
-            }
         }
     }
 }
