@@ -24,8 +24,10 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 // local development.
 // $settings['hash_salt'] = 'change_me';
 
-// Set up a config sync directory.
-//
+// Set a default private files directory outside of the docroot.
+$settings['file_private_path'] = '../private';
+
+// Set a default config sync directory outside of the docroot.
 // This is defined inside the read-only "config" directory, deployed via Git.
 $settings['config_sync_directory'] = '../config/sync';
 
