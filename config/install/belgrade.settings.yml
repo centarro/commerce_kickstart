@@ -1,0 +1,55 @@
+# Default settings should not be located here. This file is only used to
+# override existing settings.
+
+
+# General.
+# ----------------------------
+inline_logo: 1
+fieldset_accordion: 1
+
+# Fonts and Icons.
+# ----------------------------
+font_set: 'raleway'
+belgrade_icons: 1
+
+# Product teaser.
+# ----------------------------
+product_teaser: 'belgrade'
+
+# Messages.
+# ----------------------------
+message_type: 'alerts'
+toast_placement: 'bottom_left'
+
+# Regions.
+# ----------------------------
+# Main
+main_container: 'container-xl'
+
+# Navigation (Offcanvas)
+navigation_toggle_text: 'Menu'
+navigation_logo: 1
+navigation_position: 'start'
+region_class_navigation: 'bg-primary opacify-links text-white'
+
+# Top Bar
+region_class_top_bar: 'position-relative bg-dark py-2 opacify-links text-white'
+region_container_top_bar: 'container-xl'
+
+# Header
+region_class_header: 'py-5 mt-lg-4'
+region_container_header: 'container-xl'
+
+# Sidebar First
+region_class_sidebar_first: 'col-lg-3 me-lg-4 order-first'
+region_container_sidebar_first: ''
+
+# Content
+region_class_content: 'col'
+
+# Sidebar Second
+region_class_sidebar_second: 'col-lg-3'
+
+# Footer
+region_class_footer: 'bg-dark py-5 opacify-links text-white'
+region_container_footer: 'container-xl'
