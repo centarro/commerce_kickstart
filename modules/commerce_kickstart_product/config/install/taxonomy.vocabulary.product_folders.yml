@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Product Folders'
-vid: product_folders
-description: ''
-weight: 0
