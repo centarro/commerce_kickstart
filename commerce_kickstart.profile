@@ -5,7 +5,6 @@
  * Enables modules and site configuration for a commerce_base site installation.
  */
 
-use Drupal\contact\Entity\ContactForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -17,13 +16,4 @@ function commerce_kickstart_form_install_configure_form_alter(&$form, FormStateI
   // Add a placeholder as example that one can choose an arbitrary site name.
   $form['site_information']['site_name']['#attributes']['placeholder'] = t('Commerce Kickstart');
   $form['regional_settings']['site_default_country']['#default_value'] = 'US';
-  $form['#submit'][] = 'commerce_kickstart_form_install_configure_submit';
-}
-
-/**
- * Submission handler to sync the contact.form.feedback recipient.
- */
-function commerce_kickstart_form_install_configure_submit($form, FormStateInterface $form_state) {
-  $site_mail = $form_state->getValue('site_mail');
-  ContactForm::load('feedback')->setRecipients([$site_mail])->trustData()->save();
 }

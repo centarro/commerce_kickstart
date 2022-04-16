@@ -13,8 +13,6 @@ mode: default
 content:
   account:
     weight: -10
-  contact:
-    weight: 5
   language:
     weight: 0
   timezone:

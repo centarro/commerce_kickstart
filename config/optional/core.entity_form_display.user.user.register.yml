@@ -19,7 +19,6 @@ content:
     third_party_settings: {  }
 hidden:
   commerce_remote_id: true
-  contact: true
   language: true
   path: true
   timezone: true
