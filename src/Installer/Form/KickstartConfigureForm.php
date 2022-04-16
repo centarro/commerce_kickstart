@@ -102,10 +102,6 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
    */
   private function getFeatures(): array {
     return [
-      'commerce_kickstart_content' => [
-        'title' => t('Content'),
-        'description' => t('Create informational pages using a basic content type.'),
-      ],
       'commerce_kickstart_physical_product' => [
         'title' => t('Physical products'),
         'description' => t('Sell physical products, collect shipping information, and charge shipping fees in checkout.'),
