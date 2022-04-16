@@ -35,16 +35,10 @@
         }
     ],
     "require": {
-        "centarro/centarro_claro": "1.x-dev",
         "drupal/admin_toolbar": "^3.0",
-        "drupal/belgrade": "2.0.x-dev",
         "drupal/better_exposed_filters": "^5.0",
         "drupal/commerce": "^2.30",
-        "drupal/commerce_file": "^2.0@beta",
-        "drupal/commerce_paypal": "^1.0@RC",
-        "drupal/commerce_product_tax": "^1.0@RC",
         "drupal/commerce_recurring": "^1.0@beta",
-        "drupal/commerce_shipping": "^2.1",
         "drupal/config_split": "^2.0@beta",
         "drupal/core_views_facets": "^2.0",
         "drupal/facets_pretty_paths": "^1.2",
@@ -58,6 +52,7 @@
         "oomphinc/composer-installers-extender": "^2.0"
     },
     "require-dev": {
+        "centarro/certified-projects": "^1.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
