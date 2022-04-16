@@ -29,7 +29,6 @@ dependencies:
   - commerce_store
   - commerce_payment
   - commerce_promotion
-  - commerce_tax
 
   # Contrib
 
@@ -68,6 +67,9 @@ install:
   - views_ui
   - tour
   - automated_cron
+
+  # Commerce
+  - commerce_tax
 
   # Contrib
   - admin_toolbar
