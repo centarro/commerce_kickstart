@@ -26,12 +26,32 @@
             "url": "https://git.drupalcode.org/project/commerce_demo.git"
         },
         {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "type": "package",
+            "package": {
+                "name": "furf/jquery-ui-touch-punch",
+                "version": "0.2.3",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/furf/jquery-ui-touch-punch/archive/4bc009145202d9c7483ba85f3a236a8f3470354d.zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "select2/select2",
+                "version": "4.1.0-rc.0",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/select2/select2/archive/refs/tags/4.1.0-rc.0.zip"
+                }
+            }
         },
         {
             "type": "composer",
-            "url": "https://asset-packagist.org"
+            "url": "https://packages.drupal.org/8"
         }
     ],
     "require": {
@@ -47,8 +67,8 @@
         "drupal/select2": "^1.13",
         "drupal/symfony_mailer": "1.x-dev",
         "drupal/token": "^1.0",
-        "npm-asset/jquery-ui-touch-punch": "^0.2.3",
-        "npm-asset/select2": "^4.0",
+        "furf/jquery-ui-touch-punch": "0.2.3",
+        "select2/select2": "4.1.0-rc.0",
         "oomphinc/composer-installers-extender": "^2.0"
     },
     "require-dev": {
@@ -97,7 +117,10 @@
             "overwrite": true,
             "file-mapping": {
                 "[web-root]/sites/default/settings.php": "assets/settings.php",
-                "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php"
+                "[web-root]/sites/default/settings.lando.php": "assets/settings.lando.php",
+                "[web-root]/libraries/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js": "libraries/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js",
+                "[web-root]/libraries/select2/dist/js/select2.min.js": "libraries/select2/dist/js/select2.min.js",
+                "[web-root]/libraries/select2/dist/css/select2.min.css": "libraries/select2/dist/css/select2.min.css"
             }
         },
         "installer-name": "commerce_kickstart",
@@ -118,11 +141,12 @@
             "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "web/libraries/jquery-ui-touch-punch": ["npm-asset/jquery-ui-touch-punch"],
+            "libraries/{$name}": [
+                "furf/jquery-ui-touch-punch",
+                "select2/select2"
+            ],
             "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:drupal-library"
             ],
             "web/modules/custom/{$name}": [
                 "type:drupal-custom-module"
