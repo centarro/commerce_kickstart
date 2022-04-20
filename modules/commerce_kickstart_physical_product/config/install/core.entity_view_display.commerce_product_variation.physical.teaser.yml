@@ -1,3 +1,4 @@
+uuid: 3139cffc-2197-4e6a-af23-660431877642
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - field.field.commerce_product_variation.physical.weight
   module:
     - commerce_price
+_core:
+  default_config_hash: 4gTn3zAmvAjD4bOtPo3jqhFn7FDMcCNUuHiR5RugFJg
 id: commerce_product_variation.physical.teaser
 targetEntityType: commerce_product_variation
 bundle: physical

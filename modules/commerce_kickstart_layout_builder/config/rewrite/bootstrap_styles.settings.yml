@@ -1,0 +1,46 @@
+layout_builder_theme: dark
+background_colors: "bg-primary|Primary\r\nbg-dark|Dark\r\nbg-light|Light"
+background_image:
+  bundle: image
+  field: field_media_image
+background_local_video:
+  bundle: video
+  field: field_media_video_file
+text_colors: "text-white|White\r\ntext-black|Black"
+text_alignment: "text-start|Left\r\ntext-center|Center\r\ntext-end|Right"
+padding: "p-1|Padding 1\r\np-2|Padding 2\r\np-3|Padding 3\r\np-4|Padding 4\r\np-5|Padding 5\r\np-6|Padding 6"
+padding_left: "ps-1|Padding Left 1\r\nps-2|Padding Left 2\r\nps-3|Padding Left 3\r\nps-4|Padding Left 4\r\nps-5|Padding Left 5\r\nps-6|Padding Left 6"
+padding_top: "pt-1|Padding Top 1\r\npt-2|Padding Top 2\r\npt-3|Padding Top 3\r\npt-4|Padding Top 4\r\npt-5|Padding Top 5\r\npt-6|Padding Top 6"
+padding_right: "pe-1|Padding Right 1\r\npe-2|Padding Right 2\r\npe-3|Padding Right 3\r\npe-4|Padding Right 4\r\npe-5|Padding Right 5\r\npe-6|Padding Right 6"
+padding_bottom: "pb-1|Padding Bottom 1\r\npb-2|Padding Bottom 2\r\npb-3|Padding Bottom 3\r\npb-4|Padding Bottom 4\r\npb-5|Padding Bottom 5\r\npb-6|Padding Bottom 6"
+margin: "m-1|Margin 1\r\nm-2|Margin 2\r\nm-3|Margin 3\r\nm-4|Margin 4\r\nm-5|Margin 5\r\nm-6|Margin 6"
+margin_left: "ms-1|Margin Left 1\r\nms-2|Margin Left 2\r\nms-3|Margin Left 3\r\nms-4|Margin Left 4\r\nms-5|Margin Left 5\r\nms-6|Margin Left 6"
+margin_top: "mt-1|Margin Top 1\r\nmt-2|Margin Top 2\r\nmt-3|Margin Top 3\r\nmt-4|Margin Top 4\r\nmt-5|Margin Top 5\r\nmt-6|Margin Top 6"
+margin_right: "me-1|Margin Right 1\r\nme-2|Margin Right 2\r\nme-3|Margin Right 3\r\nme-4|Margin Right 4\r\nme-5|Margin Right 5\r\nme-6|Margin Right 6"
+margin_bottom: "mb-1|Margin Bottom 1\r\nmb-2|Margin Bottom 2\r\nmb-3|Margin Bottom 3\r\nmb-4|Margin Bottom 4\r\nmb-5|Margin Bottom 5\r\nmb-6|Margin Bottom 6"
+border_style: "bs-border-style-solid|Solid\r\nbs-border-style-dashed|Dashed\r\nbs-border-style-dotted|Dotted"
+border_left_style: "bs-border-style-left-solid|Solid\r\nbs-border-style-left-dashed|Dashed\r\nbs-border-style-left-dotted|Dotted"
+border_top_style: "bs-border-style-top-solid|Solid\r\nbs-border-style-top-dashed|Dashed\r\nbs-border-style-top-dotted|Dotted"
+border_right_style: "bs-border-style-right-solid|Solid\r\nbs-border-style-right-dashed|Dashed\r\nbs-border-style-right-dotted|Dotted"
+border_bottom_style: "bs-border-style-bottom-solid|Solid\r\nbs-border-style-bottom-dashed|Dashed\r\nbs-border-style-bottom-dotted|Dotted"
+border_width: "bs-border-width-1|Width 1\r\nbs-border-width-2|Width 2\r\nbs-border-width-3|Width 3"
+border_left_width: "bs-border-width-left-1|Width 1\r\nbs-border-width-left-2|Width 2\r\nbs-border-width-left-3|Width 3"
+border_top_width: "bs-border-width-top-1|Width 1\r\nbs-border-width-top-2|Width 2\r\nbs-border-width-top-3|Width 3"
+border_right_width: "bs-border-width-right-1|Width 1\r\nbs-border-width-right-2|Width 2\r\nbs-border-width-right-3|Width 3"
+border_bottom_width: "bs-border-width-bottom-1|Width 1\r\nbs-border-width-bottom-2|Width 2\r\nbs-border-width-bottom-3|Width 3"
+border_color: "bs-border-color-red|Red\r\nbs-border-color-green|Green\r\nbs-border-color-blue|Blue"
+border_left_color: "bs-border-color-left-red|Red\r\nbs-border-color-left-green|Green\r\nbs-border-color-left-blue|Blue"
+border_top_color: "bs-border-color-top-red|Red\r\nbs-border-color-top-green|Green\r\nbs-border-color-top-blue|Blue"
+border_right_color: "bs-border-color-right-red|Red\r\nbs-border-color-right-green|Green\r\nbs-border-color-right-blue|Blue"
+border_bottom_color: "bs-border-color-bottom-red|Red\r\nbs-border-color-bottom-green|Green\r\nbs-border-color-bottom-blue|Blue"
+rounded_corners: "bs-border-radius-1|Radius 1\r\nbs-border-radius-2|Radius 2\r\nbs-border-radius-3|Radius 3"
+rounded_corner_top_left: "bs-border-radius-top-left-1|Radius 1\r\nbs-border-radius-top-left-2|Radius 2\r\nbs-border-radius-top-left-3|Radius 3"
+rounded_corner_top_right: "bs-border-radius-top-right-1|Radius 1\r\nbs-border-radius-top-right-2|Radius 2\r\nbs-border-radius-top-right-3|Radius 3"
+rounded_corner_bottom_left: "bs-border-radius-bottom-left-1|Radius 1\r\nbs-border-radius-bottom-left-2|Radius 2\r\nbs-border-radius-bottom-left-3|Radius 3"
+rounded_corner_bottom_right: "bs-border-radius-bottom-right-1|Radius 1\r\nbs-border-radius-bottom-right-2|Radius 2\r\nbs-border-radius-bottom-right-3|Radius 3"
+scroll_effects: "fade-up|Fade Up\r\nfade-down|Fade Down\r\nfade-left|Fade Left\r\nfade-right|Fade Right\r\nfade-up-right|Fade Up Right\r\nfade-up-left|Fade Up Left\r\nfade-down-right|Fade Down Right\r\nfade-down-left|Fade Down Left\r\nflip-left|Flip Left\r\nflip-right|Flip Right\r\nflip-up|Flip Up\r\nflip-down|Flip Down\r\nzoom-in|Zoom In\r\nzoom-in-up|Zoom In Up\r\nzoom-in-down|Zoom In Down\r\nzoom-in-left|Zoom In Left\r\nzoom-in-right|Zoom In Right\r\nzoom-out|Zoom Out\r\nzoom-out-up|Zoom Out Up\r\nzoom-out-down|Zoom Out Down\r\nzoom-out-right|Zoom Out Right\r\nzoom-out-left|Zoom Out Left"
+attribute_type: data
+data_key: aos
+scroll_effects_attr_type: 1
+scroll_effects_data_key: data-aos
+scroll_effects_library_type: external

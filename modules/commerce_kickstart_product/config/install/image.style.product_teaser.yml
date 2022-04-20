@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: product_teaser
+label: 'Product teaser'
+effects:
+  c5938430-7c2d-4d4a-ba1f-57a85b1aeea1:
+    uuid: c5938430-7c2d-4d4a-ba1f-57a85b1aeea1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      anchor: center-center

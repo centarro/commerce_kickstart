@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: cklb_small_max_600px
+label: 'Small (max 600px)'
+effects:
+  9b1bd098-bd42-4521-8d80-719a8cb298fc:
+    uuid: 9b1bd098-bd42-4521-8d80-719a8cb298fc
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: true

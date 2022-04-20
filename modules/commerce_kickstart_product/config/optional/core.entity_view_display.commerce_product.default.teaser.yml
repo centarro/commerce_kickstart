@@ -6,45 +6,42 @@ dependencies:
     - core.entity_view_mode.commerce_product.teaser
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.images
+    - field.field.commerce_product.default.layout_builder__layout
     - field.field.commerce_product.default.product_brand
     - field.field.commerce_product.default.product_collections
     - field.field.commerce_product.default.product_tags
-    - image.style.medium
+    - image.style.product_teaser
   module:
-    - image
+    - image_delta_formatter
 id: commerce_product.default.teaser
 targetEntityType: commerce_product
 bundle: default
 mode: teaser
 content:
   images:
-    weight: 0
+    type: image_delta_formatter
     label: hidden
     settings:
-      image_style: medium
+      deltas: '0'
+      image_style: product_teaser
       image_link: content
+      deltas_reversed: 0
     third_party_settings: {  }
-    type: image
-    region: content
-  product_brand:
-    weight: 2
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
+    weight: 0
     region: content
   title:
-    label: hidden
     type: string
-    weight: 1
-    region: content
+    label: hidden
     settings:
       link_to_entity: true
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   created: true
+  layout_builder__layout: true
+  product_brand: true
   product_collections: true
   product_tags: true
   search_api_excerpt: true

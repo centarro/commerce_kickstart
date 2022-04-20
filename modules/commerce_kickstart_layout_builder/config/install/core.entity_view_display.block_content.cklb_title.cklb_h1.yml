@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cklb_title
+    - core.entity_view_mode.block_content.cklb_h1
+    - field.field.block_content.cklb_title.cklb_title
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.cklb_title.cklb_h1
+targetEntityType: block_content
+bundle: cklb_title
+mode: cklb_h1
+content:
+  cklb_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

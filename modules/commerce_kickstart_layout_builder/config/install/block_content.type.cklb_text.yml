@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cklb_text
+label: Text
+revision: 0
+description: 'Simple text block'
