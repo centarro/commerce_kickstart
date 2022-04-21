@@ -122,6 +122,10 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
         'title' => t('Layout Builder support'),
         'description' => t('Adding support for Layout Builder on products and creating Landing page content type with custom blocks.'),
       ],
+      'commerce_kickstart_search_api_catalog' => [
+        'title' => t('Commerce Kickstart Search API Catalog'),
+        'description' => t('Search API based Product Catalog search with facets, DB server and Products Index.'),
+      ],
     ];
   }
 

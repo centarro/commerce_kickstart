@@ -77,6 +77,7 @@
         "drupal/layout_builder_restrictions": "^2.12",
         "drupal/section_library": "^1.0",
         "drupal/select2": "^1.13",
+        "drupal/search_api": "^1.23",
         "drupal/symfony_mailer": "1.x-dev",
         "drupal/token": "^1.0",
         "furf/jquery-ui-touch-punch": "0.2.3",

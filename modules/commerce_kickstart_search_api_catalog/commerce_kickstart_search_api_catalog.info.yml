@@ -1,0 +1,13 @@
+name: 'Commerce Kickstart Search API Catalog'
+type: module
+description: 'Search API based Product Catalog search with facets, DB server and Products Index.'
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'better_exposed_filters:better_exposed_filters'
+  - 'commerce:commerce'
+  - 'commerce:commerce_product'
+  - 'commerce_kickstart:commerce_kickstart_product'
+  - 'facets:facets'
+  - 'search_api:search_api'
+  - 'search_api:search_api_db'
+package: 'Commerce Kickstart'
