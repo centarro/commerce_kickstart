@@ -18,7 +18,7 @@ use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
  *     }
  *   },
  *   icon_map = {
- *     "main" = {"main"}
+ *     0 = {"main"}
  *   }
  * )
  */
