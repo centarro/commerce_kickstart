@@ -106,9 +106,9 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
         'title' => t('Physical products'),
         'description' => t('Sell physical products, collect shipping information, and charge shipping fees in checkout.'),
       ],
-      'commerce_kickstart_basic_catalog' => [
-        'title' => t('Basic catalog'),
-        'description' => t('Merchandise your products in a taxonomy based catalog with enhanced exposed filters.'),
+      'commerce_kickstart_search_api_catalog' => [
+        'title' => t('Search powered catalog'),
+        'description' => t('Merchandise your products in a facet based catalog with keyword search and sorting.'),
       ],
       'commerce_kickstart_media_product' => [
         'title' => t('Media products'),
@@ -122,9 +122,9 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
         'title' => t('Layout Builder support'),
         'description' => t('Adding support for Layout Builder on products and creating Landing page content type with custom blocks.'),
       ],
-      'commerce_kickstart_search_api_catalog' => [
-        'title' => t('Commerce Kickstart Search API Catalog'),
-        'description' => t('Search API based Product Catalog search with facets, DB server and Products Index.'),
+      'commerce_kickstart_basic_catalog' => [
+        'title' => t('Basic catalog'),
+        'description' => t('Merchandise your products in a taxonomy based catalog with enhanced exposed filters.'),
       ],
     ];
   }
