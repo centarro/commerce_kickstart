@@ -78,7 +78,7 @@
         "drupal/section_library": "^1.0",
         "drupal/select2": "^1.13",
         "drupal/search_api": "^1.23",
-        "drupal/symfony_mailer": "1.x-dev",
+        "drupal/symfony_mailer": "1.0.0-alpha11",
         "drupal/token": "^1.0",
         "furf/jquery-ui-touch-punch": "0.2.3",
         "select2/select2": "4.1.0-rc.0",
