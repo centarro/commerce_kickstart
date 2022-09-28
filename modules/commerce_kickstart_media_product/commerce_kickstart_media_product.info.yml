@@ -18,4 +18,5 @@ dependencies:
   - 'drupal:text'
   - 'field_group:field_group'
   - 'physical:physical'
+  - 'pathauto:pathauto'
 package: 'Commerce Kickstart'
