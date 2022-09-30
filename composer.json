@@ -73,7 +73,7 @@
         "drupal/layout_builder_blocks": "^1.0",
         "drupal/layout_builder_lock": "^1.1",
         "drupal/layout_builder_modal": "^1.1",
-        "drupal/layout_builder_operation_link": "^1.0",
+        "drupal/layout_builder_operation_link": "^2.1",
         "drupal/layout_builder_restrictions": "^2.12",
         "drupal/section_library": "^1.0",
         "drupal/select2": "^1.13",
