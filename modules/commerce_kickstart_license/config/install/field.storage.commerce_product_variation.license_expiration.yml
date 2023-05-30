@@ -7,7 +7,7 @@ dependencies:
 id: commerce_product_variation.license_expiration
 field_name: license_expiration
 entity_type: commerce_product_variation
-type: 'commerce_plugin_item:recurring_period'
+type: 'commerce_plugin_item:commerce_license_period'
 settings: {  }
 module: commerce
 locked: true

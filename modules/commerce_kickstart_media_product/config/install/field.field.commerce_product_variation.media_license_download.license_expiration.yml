@@ -17,4 +17,4 @@ translatable: false
 default_value: {  }
 default_value_callback: null
 settings: {  }
-field_type: 'commerce_plugin_item:recurring_period'
+field_type: 'commerce_plugin_item:commerce_license_period'
