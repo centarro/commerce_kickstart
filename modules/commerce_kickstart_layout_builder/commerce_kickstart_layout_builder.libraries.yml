@@ -3,6 +3,8 @@ cklb-slideshow:
   js:
     js/cklb-slideshow.js: {}
   dependencies:
+    - core/jquery
+    - core/once
     - commerce_kickstart_layout_builder/slick
 
 slick:

@@ -3,8 +3,7 @@
 
   Drupal.behaviors.slickSlider = {
     attach: function (context) {
-      $(".cklb-slideshow:not(.layout-builder__region)", context)
-        .once("slick-slider")
+      $(once("slick-slider", ".cklb-slideshow:not(.layout-builder__region)", context))
         .each(function () {
           var $slider = $(this);
 
