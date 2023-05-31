@@ -4,6 +4,8 @@ description: 'Adding support for Layout Builder on products and creating Landing
 core_version_requirement: '^8.9 || ^9'
 dependencies:
   - 'block_visibility_conditions:block_visibility_conditions'
+  - 'block_visibility_conditions:block_visibility_conditions_node'
+  - 'block_visibility_conditions:block_visibility_conditions_taxonomy'
   - 'bootstrap_layout_builder:bootstrap_layout_builder'
   - 'config_rewrite:config_rewrite'
   - 'commerce:commerce'

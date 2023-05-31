@@ -5,6 +5,8 @@ dependencies:
     - facets.facet.product_collections
   module:
     - block_visibility_conditions
+    - block_visibility_conditions_node
+    - block_visibility_conditions_taxonomy
     - facets
     - system
   theme:

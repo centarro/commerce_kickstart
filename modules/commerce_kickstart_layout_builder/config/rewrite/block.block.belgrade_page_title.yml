@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - block_visibility_conditions
+    - block_visibility_conditions_node
+    - block_visibility_conditions_taxonomy
     - system
   theme:
     - belgrade
