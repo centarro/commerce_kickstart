@@ -2,7 +2,7 @@ name: 'Commerce Kickstart Physical Products'
 type: module
 description: 'Physical Product Types'
 package: 'Commerce Kickstart'
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: '^8.9 || ^9 || ^10'
 dependencies:
   - 'commerce:commerce'
   - 'commerce:commerce_order'

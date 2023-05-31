@@ -1,7 +1,7 @@
 name: 'Commerce Kickstart Layout Builder'
 type: module
 description: 'Adding support for Layout Builder on products and creating Landing page content type with custom blocks'
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: '^8.9 || ^9 || ^10'
 dependencies:
   - 'block_visibility_conditions:block_visibility_conditions'
   - 'block_visibility_conditions:block_visibility_conditions_node'

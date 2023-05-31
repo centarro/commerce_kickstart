@@ -1,7 +1,7 @@
 name: 'Commerce Kickstart Products'
 description: 'General Product Configuration'
 type: module
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: '^8.9 || ^9 || ^10'
 dependencies:
   - 'bootstrap_basic_image_gallery:bootstrap_basic_image_gallery'
   - 'commerce:commerce'

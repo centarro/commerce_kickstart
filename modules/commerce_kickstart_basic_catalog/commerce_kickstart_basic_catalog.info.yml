@@ -1,7 +1,7 @@
 name: 'Commerce Kickstart Basic Catalog'
 type: module
 description: 'Basic Product Catalog search with exposed filters.'
-core_version_requirement: '^8.9 || ^9'
+core_version_requirement: '^8.9 || ^9 || ^10'
 dependencies:
   - 'better_exposed_filters:better_exposed_filters'
   - 'commerce_kickstart_product:commerce_kickstart_product'
