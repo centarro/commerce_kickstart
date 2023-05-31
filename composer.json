@@ -57,10 +57,10 @@
     "require": {
         "drupal/admin_toolbar": "^3.0",
         "drupal/better_exposed_filters": "^5.0",
-        "drupal/block_visibility_conditions": "^1.0",
+        "drupal/block_visibility_conditions": "^2.1",
         "drupal/bootstrap_basic_image_gallery": "^1.5",
         "drupal/bootstrap_layout_builder": "^2.0",
-        "drupal/commerce": "^2.30",
+        "drupal/commerce": "^2.35",
         "drupal/commerce_recurring": "^1.0@beta",
         "drupal/config_rewrite": "^1.4",
         "drupal/config_split": "^2.0@beta",
