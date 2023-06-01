@@ -180,6 +180,9 @@
             },
             "drupal/bootstrap_layout_builder": {
                 "3335356: Fix Module does not work in D10": "https://www.drupal.org/files/issues/2023-01-25/issue_3335356_drupal10.patch"
+            },
+            "drupal/section_library": {
+                "#3348151 - Fix console errors with D10": "https://www.drupal.org/files/issues/2023-03-16/3348151-5.patch"
             }
         }
     }
