@@ -114,10 +114,6 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
         'title' => t('Media products'),
         'description' => t('Sell digital products with access controlled downloads, optionally combined with physical variants.'),
       ],
-      'commerce_kickstart_membership_subscription' => [
-        'title' => t('Membership subscriptions'),
-        'description' => t('Sell site or organization memberships with role based subscriptions and recurring billing.'),
-      ],
       'commerce_kickstart_layout_builder' => [
         'title' => t('Layout Builder support'),
         'description' => t('Adding support for Layout Builder on products and creating Landing page content type with custom blocks.'),
