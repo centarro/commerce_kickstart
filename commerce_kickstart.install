@@ -18,8 +18,14 @@ use Drupal\user\UserInterface;
  * @see system_install()
  */
 function commerce_kickstart_install() {
-  // Set front page to "node".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/frontpage')->save(TRUE);
+  // Set front page to "node" by default or "frontpage" with commerce_demo.
+  if (\Drupal::service('module_handler')->moduleExists('commerce_demo')) {
+    $path = '/frontpage';
+  }
+  else {
+    $path = '/node';
+  }
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', $path)->save(TRUE);
 
   // Allow visitor account creation with administrative approval.
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');
