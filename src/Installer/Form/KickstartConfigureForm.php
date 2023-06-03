@@ -37,7 +37,7 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
 
     $form['demo'] = [
       '#type' => 'fieldset',
-      '#title' => t('Complete store demo'),
+      '#title' => t('Full store demo'),
     ];
 
     if ($this->moduleExtensionList->exists('commerce_demo')) {

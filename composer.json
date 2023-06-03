@@ -62,7 +62,6 @@
         "drupal/bootstrap_layout_builder": "^2.0",
         "drupal/commerce": "^2.35",
         "drupal/color": "^1",
-        "drupal/commerce_recurring": "^1.0@beta",
         "drupal/config_rewrite": "^1.4",
         "drupal/config_split": "^2.0@beta",
         "drupal/core_views_facets": "^2.0",
