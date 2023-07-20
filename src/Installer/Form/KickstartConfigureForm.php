@@ -6,6 +6,7 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Extension\ModuleExtensionList;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class KickstartConfigureForm extends FormBase implements ContainerInjectionInterface {
@@ -37,25 +38,25 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
 
     $form['demo'] = [
       '#type' => 'fieldset',
-      '#title' => t('Full store demo'),
+      '#title' => $this->t('Full store demo'),
     ];
 
     if ($this->moduleExtensionList->exists('commerce_demo')) {
       $form['demo']['install_demo'] = [
         '#type' => 'checkbox',
-        '#title' => t('Install all features with sample content.'),
-        '#description' => t('Great for seeing all that Drupal Commerce has to offer. Not recommended for a site you intend to take live.'),
+        '#title' => $this->t('Install all features with sample content.'),
+        '#description' => $this->t('Great for seeing all that Drupal Commerce has to offer. Not recommended for a site you intend to take live.'),
         '#default_value' => FALSE,
       ];
     }
     else {
-      $form['demo']['#description'] = t('Add the Commerce Demo module to your codebase and reload this page if you want to install a complete demo store with sample content: <p><pre>composer require drupal/commerce_demo:^3.0</pre></p>');
+      $form['demo']['#description'] = $this->t('Add the Commerce Demo module to your codebase and reload this page if you want to install a complete demo store with sample content: <p><pre>composer require drupal/commerce_demo:^3.0</pre></p>');
     }
 
     $form['features'] = [
       '#type' => 'fieldset',
-      '#title' => t('Select starting features'),
-      '#description' => t('Features are small modules containing default configuration you can install now or at any point in the future.'),
+      '#title' => $this->t('Select starting features'),
+      '#description' => $this->t('Features are small modules containing default configuration you can install now or at any point in the future.'),
       '#states' => [
         'visible' => [
           ':input[name="install_demo"]' => ['checked' => FALSE],
@@ -103,24 +104,24 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
   private function getFeatures(): array {
     return [
       'commerce_kickstart_physical_product' => [
-        'title' => t('Physical products'),
-        'description' => t('Sell physical products, collect shipping information, and charge shipping fees in checkout.'),
+        'title' => $this->t('Physical products'),
+        'description' => $this->t('Sell physical products, collect shipping information, and charge shipping fees in checkout.'),
       ],
       'commerce_kickstart_search_api_catalog' => [
-        'title' => t('Search powered catalog'),
-        'description' => t('Merchandise your products in a facet based catalog with keyword search and sorting.'),
+        'title' => $this->t('Search powered catalog'),
+        'description' => $this->t('Merchandise your products in a facet based catalog with keyword search and sorting.'),
       ],
       'commerce_kickstart_media_product' => [
-        'title' => t('Media products'),
-        'description' => t('Sell digital products with access controlled downloads, optionally combined with physical variants.'),
+        'title' => $this->t('Media products'),
+        'description' => $this->t('Sell digital products with access controlled downloads, optionally combined with physical variants.'),
       ],
       'commerce_kickstart_layout_builder' => [
-        'title' => t('Layout Builder support'),
-        'description' => t('Adding support for Layout Builder on products and creating Landing page content type with custom blocks.'),
+        'title' => $this->t('Layout Builder support'),
+        'description' => $this->t('Adding support for Layout Builder on products and creating Landing page content type with custom blocks.'),
       ],
       'commerce_kickstart_basic_catalog' => [
-        'title' => t('Basic catalog'),
-        'description' => t('Merchandise your products in a taxonomy based catalog with enhanced exposed filters.'),
+        'title' => $this->t('Basic catalog'),
+        'description' => $this->t('Merchandise your products in a taxonomy based catalog with enhanced exposed filters.'),
       ],
     ];
   }
