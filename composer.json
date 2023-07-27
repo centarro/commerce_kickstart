@@ -172,13 +172,6 @@
         "patches": {
             "drupal/bootstrap_basic_image_gallery": {
                 "#3363948 - Fix D10 compatibility issues": "https://www.drupal.org/files/issues/2023-06-01/3363948-3.patch"
-            },
-            "drupal/bootstrap_styles": {
-                "#3315218: Fix not loading bootstrap_styles/aos.local or bootstrap_styles/aos.remote library.": "https://www.drupal.org/files/issues/2023-01-25/3315218-17--1-0-x.patch",
-                "#3330458: [Drupal 10] Change of JS jquery/once to drupal core/once, migrate JS API.": "https://www.drupal.org/files/issues/2023-03-07/bootstrap_styles-3330458-8.patch"
-            },
-            "drupal/bootstrap_layout_builder": {
-                "#3335356: Fix Module does not work in D10": "https://www.drupal.org/files/issues/2023-01-25/issue_3335356_drupal10.patch"
             }
         }
     }
