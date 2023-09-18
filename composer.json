@@ -168,11 +168,6 @@
             ]
         },
         "enable-patching": true,
-        "composer-exit-on-patch-failure": true,
-        "patches": {
-            "drupal/bootstrap_basic_image_gallery": {
-                "#3363948 - Fix D10 compatibility issues": "https://www.drupal.org/files/issues/2023-06-01/3363948-3.patch"
-            }
-        }
+        "composer-exit-on-patch-failure": true
     }
 }
