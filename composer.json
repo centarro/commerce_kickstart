@@ -60,7 +60,7 @@
         "drupal/block_visibility_conditions": "^2.1",
         "drupal/bootstrap_basic_image_gallery": "^1.5",
         "drupal/bootstrap_layout_builder": "^2.0",
-        "drupal/commerce": "^2.35",
+        "drupal/commerce": "^3",
         "drupal/color": "^1",
         "drupal/config_rewrite": "^1.4",
         "drupal/config_split": "^2.0@beta",

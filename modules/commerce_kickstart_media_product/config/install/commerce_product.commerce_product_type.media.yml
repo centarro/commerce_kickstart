@@ -4,7 +4,6 @@ dependencies: {  }
 id: media
 label: Media
 description: ''
-variationType: media_license_download
 variationTypes:
   - media_license_download
   - media_physical

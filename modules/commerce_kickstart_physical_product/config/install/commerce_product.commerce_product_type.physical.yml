@@ -4,8 +4,8 @@ dependencies: {  }
 id: physical
 label: Physical
 description: ''
-variationType: physical
-variationTypes: {  }
+variationTypes:
+  - physical
 multipleVariations: true
 injectVariationFields: true
 traits: {  }
