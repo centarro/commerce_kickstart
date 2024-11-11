@@ -60,7 +60,7 @@
         "drupal/config_rewrite": "^1.4",
         "drupal/config_split": "^2.0@beta",
         "drupal/core_views_facets": "^2.0",
-        "drupal/facets_pretty_paths": "^1.2",
+        "drupal/facets_pretty_paths": "^2",
         "drupal/field_group": "^3.2",
         "drupal/image_delta_formatter": "^1.1",
         "drupal/inline_block_title_automatic": "^2",
