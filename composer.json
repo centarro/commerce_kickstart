@@ -23,6 +23,10 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "https://git.drupalcode.org/issue/bootstrap_basic_image_gallery-3429041.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://git.drupalcode.org/issue/block_visibility_conditions-3450896.git"
         },
         {
@@ -62,7 +66,7 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/better_exposed_filters": "^6",
         "drupal/block_visibility_conditions": "dev-3450896-d11",
-        "drupal/bootstrap_basic_image_gallery": "^1.5",
+        "drupal/bootstrap_basic_image_gallery": "dev-project-update-bot-only",
         "drupal/bootstrap_layout_builder": "^2.0",
         "drupal/commerce": "^3",
         "drupal/config_rewrite": "^1.4",
