@@ -46,18 +46,6 @@
             }
         },
         {
-            "type": "package",
-            "package": {
-                "name": "select2/select2",
-                "version": "4.1.0-rc.0",
-                "type": "drupal-library",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/select2/select2/archive/refs/tags/4.1.0-rc.0.zip"
-                }
-            }
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -83,12 +71,10 @@
         "drupal/layout_builder_operation_link": "^2.1",
         "drupal/layout_builder_restrictions": "^3",
         "drupal/section_library": "^1.0",
-        "drupal/select2": "^1.13",
         "drupal/search_api": "^1.23",
         "drupal/symfony_mailer": "^1.2",
         "drupal/token": "^1.0",
         "furf/jquery-ui-touch-punch": "0.2.3",
-        "select2/select2": "4.1.0-rc.0",
         "oomphinc/composer-installers-extender": "^2.0"
     },
     "require-dev": {
