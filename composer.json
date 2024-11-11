@@ -52,7 +52,7 @@
     ],
     "require": {
         "drupal/admin_toolbar": "^3.0",
-        "drupal/better_exposed_filters": "^6",
+        "drupal/better_exposed_filters": "^7",
         "drupal/block_visibility_conditions": "dev-3450896-d11",
         "drupal/bootstrap_basic_image_gallery": "dev-project-update-bot-only",
         "drupal/bootstrap_layout_builder": "^2.0",
