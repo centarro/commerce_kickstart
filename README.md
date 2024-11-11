@@ -13,7 +13,7 @@ INTRODUCTION
 ------------
 
 Commerce Kickstart is the fastest way to start building on Drupal Commerce. It
-includes an installation profile for installing Drupal 9, Commerce Core, and
+includes an installation profile for installing Drupal, Commerce Core, and
 the Centarro Commerce contributed modules and themes.
 
 The installer includes an additional step where you can install either a full
@@ -61,7 +61,7 @@ INSTALLATION
 ------------
 
 We recommend installing with our Composer project template, but you can also
-add Commerce Kickstart as a requirement to any Drupal 9.x project template. For
+add Commerce Kickstart as a requirement to any Drupal project template. For
 full instructions, please refer to [centarro/commerce-kickstart-project](https://github.com/centarro/kickstart-project).
 
 ```shell
