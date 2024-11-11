@@ -1,6 +1,6 @@
 name: Commerce Kickstart
 type: profile
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 description: 'The fastest way to start building on Drupal Commerce.'
 distribution:
   name: 'Commerce Kickstart'
@@ -42,7 +42,6 @@ install:
   - block
   - breakpoint
   - ckeditor5
-  - color
   - config
   - comment
   - contextual
@@ -63,7 +62,6 @@ install:
   - toolbar
   - field_ui
   - views_ui
-  - tour
   - automated_cron
 
   # Commerce

@@ -1,6 +1,13 @@
 (function ($, Drupal) {
   "use strict";
 
+  // Define a polyfill for $.type if it doesn't exist.
+  if (typeof jQuery.type !== 'function') {
+    jQuery.type = function(obj) {
+      return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+    };
+  }
+
   Drupal.behaviors.slickSlider = {
     attach: function (context) {
       $(once("slick-slider", ".cklb-slideshow:not(.layout-builder__region)", context))
