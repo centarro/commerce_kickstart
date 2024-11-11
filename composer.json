@@ -61,7 +61,7 @@
     "require": {
         "drupal/admin_toolbar": "^3.0",
         "drupal/better_exposed_filters": "^6",
-        "drupal/block_visibility_conditions": "dev-project-update-bot-only",
+        "drupal/block_visibility_conditions": "dev-3450896-d11",
         "drupal/bootstrap_basic_image_gallery": "^1.5",
         "drupal/bootstrap_layout_builder": "^2.0",
         "drupal/commerce": "^3",
