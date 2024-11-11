@@ -71,7 +71,7 @@
         "drupal/facets_pretty_paths": "^1.2",
         "drupal/field_group": "^3.2",
         "drupal/image_delta_formatter": "^1.1",
-        "drupal/inline_block_title_automatic": "^1.0",
+        "drupal/inline_block_title_automatic": "^2",
         "drupal/jquery_ui_touch_punch": "^1.0",
         "drupal/layout_builder_blocks": "^1.0",
         "drupal/layout_builder_lock": "^2",
