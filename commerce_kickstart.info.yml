@@ -42,7 +42,6 @@ install:
   - block
   - breakpoint
   - ckeditor5
-  - color
   - config
   - comment
   - contextual

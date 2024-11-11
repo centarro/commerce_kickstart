@@ -65,7 +65,6 @@
         "drupal/bootstrap_basic_image_gallery": "^1.5",
         "drupal/bootstrap_layout_builder": "^2.0",
         "drupal/commerce": "^3",
-        "drupal/color": "^1",
         "drupal/config_rewrite": "^1.4",
         "drupal/config_split": "^2.0@beta",
         "drupal/core_views_facets": "^2.0",
