@@ -100,6 +100,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 15
           total_pages: null
           id: 0
@@ -134,6 +135,7 @@ display:
               autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
+              autosubmit_textfield_minimum_length: 3
               autosubmit_hide: false
               input_required: false
               allow_secondary: false
@@ -156,8 +158,11 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
+                  hide_label: false
       access:
         type: none
         options: {  }
@@ -305,13 +310,13 @@ display:
               media: teaser
               physical: teaser
       query:
-        type: views_query
+        type: search_api_query
         options:
           bypass_access: false
           skip_access: false
           preserve_facet_query_args: false
       relationships: {  }
-      use_ajax: true
+      use_ajax: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -327,6 +332,7 @@ display:
       tags:
         - 'config:field.storage.commerce_product.body'
         - 'config:search_api.index.products'
+        - 'search_api_list:products'
   catalog_page:
     id: catalog_page
     display_title: 'Product Catalog Page'
@@ -359,6 +365,10 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
+        - url.site
       tags:
+        - 'config:facets.facet.product_brand'
+        - 'config:facets.facet.product_collections'
         - 'config:field.storage.commerce_product.body'
         - 'config:search_api.index.products'
+        - 'search_api_list:products'
