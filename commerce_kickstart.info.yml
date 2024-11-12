@@ -1,6 +1,7 @@
 name: Commerce Kickstart
 type: profile
 core_version_requirement: ^9 || ^10 || ^11
+version: VERSION
 description: 'The fastest way to start building on Drupal Commerce.'
 distribution:
   name: 'Commerce Kickstart'
@@ -29,9 +30,6 @@ dependencies:
   - commerce_store
   - commerce_payment
   - commerce_promotion
-
-  # Contrib
-
 
 # Module installed during profile install, but can be uninstalled later.
 install:
