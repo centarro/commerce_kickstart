@@ -8,12 +8,8 @@ distribution:
   install:
     theme: centarro_claro
 
-# Dependencies cannot be uninstalled.
-dependencies:
-  # Kickstart
-  - commerce_kickstart_core
-  - commerce_kickstart_site
-
+# Module installed during profile install, but can be uninstalled later.
+install:
   # Commerce
   - address
   - entity
@@ -30,9 +26,8 @@ dependencies:
   - commerce_store
   - commerce_payment
   - commerce_promotion
+  - commerce_tax
 
-# Module installed during profile install, but can be uninstalled later.
-install:
   # Core
   - node
   - history
@@ -60,9 +55,6 @@ install:
   - field_ui
   - views_ui
   - automated_cron
-
-  # Commerce
-  - commerce_tax
 
   # Contrib
   - admin_toolbar

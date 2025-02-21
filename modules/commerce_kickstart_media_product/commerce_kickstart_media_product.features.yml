@@ -1,4 +1,0 @@
-bundle: commerce_kickstart
-excluded:
-  - field.storage.commerce_product_variation.commerce_file
-required: true

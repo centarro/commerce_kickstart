@@ -1,7 +1,0 @@
-bundle: commerce_kickstart
-excluded:
-  - core.entity_form_display.commerce_order_item.physical_product.default
-  - core.entity_form_display.commerce_order_item.digital_license_product.add_to_cart
-  - core.entity_form_display.commerce_order_item.digital_license_product.default
-  - views.view.basic_product_catalog
-required: true

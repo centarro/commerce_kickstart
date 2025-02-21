@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: cklb_products
-label: Products
-revision: 0
-description: 'Simple block for creating a list of products'

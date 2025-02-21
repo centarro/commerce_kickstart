@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: cklb_hero
-label: Hero
-revision: 0
-description: 'Block for adding text with optional Call to Action and Subtitle '

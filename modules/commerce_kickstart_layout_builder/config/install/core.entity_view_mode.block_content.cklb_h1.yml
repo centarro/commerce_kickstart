@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - block_content
-id: block_content.cklb_h1
-label: H1
-targetEntityType: block_content
-cache: true

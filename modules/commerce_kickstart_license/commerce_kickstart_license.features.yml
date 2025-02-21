@@ -1,4 +1,0 @@
-bundle: commerce_kickstart
-excluded:
-  - core.entity_form_display.commerce_order_item.digital_license_product.default
-required: true
