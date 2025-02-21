@@ -5,6 +5,9 @@
  * Install, update and uninstall functions for the commerce_base installation profile.
  */
 
+use Composer\InstalledVersions;
+use Drupal\Core\Recipe\Recipe;
+use Drupal\Core\Recipe\RecipeRunner;
 use Drupal\shortcut\Entity\Shortcut;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
@@ -63,22 +66,19 @@ function commerce_kickstart_install() {
 }
 
 /**
- * Implement hook_install_tasks().
- */
-/**
  * Implements hook_install_tasks().
  */
 function commerce_kickstart_install_tasks(&$install_state): array {
   $tasks = [];
 
   $tasks['commerce_kickstart_install_configure_form'] = [
-    'display_name' => t('Select features'),
+    'display_name' => t('Select recipes'),
     'type' => 'form',
     'function' => 'Drupal\commerce_kickstart\Installer\Form\KickstartConfigureForm',
   ];
 
   $tasks['commerce_kickstart_install_process'] = [
-    'display_name' => t('Install features'),
+    'display_name' => t('Apply recipes'),
     'type' => 'batch',
   ];
 
@@ -116,54 +116,32 @@ function commerce_kickstart_install_process(&$install_state) {
   $commerce_kickstart_install_demo = \Drupal::state()
     ->get('commerce_kickstart.install_demo', FALSE);
 
+  $recipes = [];
   if ($commerce_kickstart_install_demo) {
-   $modules = ['commerce_demo'];
-  }
-  else {
-    $modules = \Drupal::state()
-      ->get('commerce_kickstart.install_modules', []);;
+   $recipes[] = 'commerce_kickstart_demo';
   }
 
-  $files = \Drupal::service('extension.list.module')->getList();
-
-  // Always install required modules first. Respect the dependencies between
-  // the modules.
-  $required = [];
-  $non_required = [];
-
-  // Add modules that other modules depend on.
-  foreach ($modules as $module) {
-    if ($files[$module]->requires) {
-      // Create a list of dependencies that haven't been installed yet.
-      $dependencies = array_keys($files[$module]->requires);
-      $dependencies = array_filter($dependencies, '_commerce_kickstart_filter_dependencies');
-      // Add them to the module list.
-      $modules = array_merge($modules, $dependencies);
-
-    }
+  $operations = $recipe_operations = [];
+  foreach ($recipes as $recipe) {
+    $recipe = InstalledVersions::getInstallPath('drupal/' . $recipe);
+    $recipe = Recipe::createFromDirectory($recipe);
+    $recipe_operations = array_merge($recipe_operations, RecipeRunner::toBatchOperations($recipe));
   }
 
-  $modules = array_unique($modules);
-  foreach ($modules as $module) {
-    if (!empty($files[$module]->info['required'])) {
-      $required[$module] = $files[$module]->sort;
+  // Only do each recipe's batch operations once.
+  foreach ($recipe_operations as $operation) {
+    if (in_array($operation, $operations, TRUE)) {
+      continue;
     }
     else {
-      $non_required[$module] = $files[$module]->sort;
+      $operations[] = $operation;
     }
   }
-  arsort($required);
-  arsort($non_required);
 
-  $operations = [];
-
-  foreach ($required + $non_required as $module => $weight) {
-    $operations[] = ['_install_module_batch', [$module, $files[$module]->info['name']]];
-  }
 
   return [
     'operations' => $operations,
-    'title' => $commerce_kickstart_install_demo ? t('Installing Kickstart Demo') : t('Installing Kickstart Features'),
+    'title' => $commerce_kickstart_install_demo ? t('Installing Kickstart Demo') : t('Applying Commerce Recipes'),
     'error_message' => t('The installation has encountered an error.'),
   ];
 }
@@ -188,11 +166,4 @@ function commerce_kickstart_install_finished(&$install_state) {
   foreach ($warning_messages as $warning_message) {
     $messenger->addMessage($warning_message, 'warning');
   }
-}
-
-/**
- * array_filter() callback used to filter out already installed dependencies.
- */
-function _commerce_kickstart_filter_dependencies($dependency) {
-  return !\Drupal::moduleHandler()->moduleExists($dependency);
 }

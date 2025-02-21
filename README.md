@@ -76,19 +76,12 @@ composer create-project -s dev centarro/commerce-kickstart-project kickstart
 ```
 
 If you expect to install the full demo store, you will need to add the Commerce
-Demo module to your codebase. To do so, issue the two following commands:
+Kickstart Demo recipe to your codebase. To do so, issue the two following commands:
 
 ```shell
 cd kickstart
-composer require drupal/commerce_demo:^3.0
+composer require drupal/commerce_kickstart_demo
 ```
-
-(Note: this only works when `commerce_demo` is installed using the `vcs` type
-repository definition provided by the project template or installation profile
-`composer.json` file. Attempting to install it from the Drupal package will
-result in dependency conflicts, as it interprets the `commerce_kickstart:*`
-dependencies in `commerce_kickstart.info.yml` as `drupal/commerce_kickstart`
-even though drupal.org does not currently support installation profiles.)
 
 We recommend and support [DDEV-Local](https://github.com/drud/ddev) for local development.
 Change into the newly created directory and use the following commands to

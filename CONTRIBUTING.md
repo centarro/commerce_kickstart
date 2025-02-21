@@ -55,7 +55,7 @@ Read more about all of the above and more at: https://ddev.readthedocs.io/
 In order to support installation of Commerce Kickstart via:
 
 ```shell
-composer require centarro/commerce_kickstart:^3.0
+composer require centarro/commerce_kickstart:^4.0
 ```
 
 All commits to the primary project repository on drupal.org must be mirrored
