@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cklb_image
+    - core.entity_view_mode.block_content.cklb_small
+    - field.field.block_content.cklb_image.cklb_image
+    - image.style.cklb_small_max_600px
+  module:
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.cklb_image.cklb_small
+targetEntityType: block_content
+bundle: cklb_image
+mode: cklb_small
+content:
+  cklb_image:
+    type: media_thumbnail
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: cklb_small_max_600px
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

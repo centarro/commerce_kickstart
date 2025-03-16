@@ -1,0 +1,115 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.media_license_download
+    - field.field.commerce_product_variation.media_license_download.commerce_file
+    - field.field.commerce_product_variation.media_license_download.license_expiration
+    - field.field.commerce_product_variation.media_license_download.license_type
+  module:
+    - commerce
+    - commerce_price
+    - field_group
+    - file
+third_party_settings:
+  field_group:
+    group_inventory:
+      children:
+        - sku
+        - list_price
+        - price
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Inventory
+    group_digital_download:
+      children:
+        - license_type
+        - license_expiration
+        - commerce_file
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Digital Download'
+id: commerce_product_variation.media_license_download.default
+targetEntityType: commerce_product_variation
+bundle: media_license_download
+mode: default
+content:
+  commerce_file:
+    type: file_generic
+    weight: 8
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  license_expiration:
+    type: commerce_plugin_select
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  license_type:
+    type: commerce_plugin_radios
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  list_price:
+    type: commerce_list_price
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uk_tax_rate:
+    weight: 92
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_tax_rate_default
+    region: content
+hidden:
+  created: true
+  uid: true

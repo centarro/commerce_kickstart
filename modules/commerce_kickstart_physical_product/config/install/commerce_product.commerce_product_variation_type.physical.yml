@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: physical
+label: Physical
+orderItemType: physical_product
+generateTitle: true
+traits:
+  - purchasable_entity_shippable
+locked: false

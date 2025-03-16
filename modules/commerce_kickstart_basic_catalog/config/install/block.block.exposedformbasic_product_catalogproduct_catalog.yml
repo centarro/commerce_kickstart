@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.basic_product_catalog
+  module:
+    - block_visibility_conditions
+    - system
+    - views
+  theme:
+    - belgrade
+id: exposedformbasic_product_catalogproduct_catalog
+theme: belgrade
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:basic_product_catalog-product_catalog'
+settings:
+  id: 'views_exposed_filter_block:basic_product_catalog-product_catalog'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /products

@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: physical
+label: Physical
+description: ''
+variationTypes:
+  - physical
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

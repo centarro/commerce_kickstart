@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cklb_title
+label: Title
+revision: 0
+description: 'Title block with additional display for H1 title.'

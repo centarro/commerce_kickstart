@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.media_license_download
+    - field.storage.commerce_product_variation.commerce_file
+  module:
+    - file
+id: commerce_product_variation.media_license_download.commerce_file
+field_name: commerce_file
+entity_type: commerce_product_variation
+bundle: media_license_download
+label: File(s)
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  file_extensions: 'mp4 m4v flv wmv mp3 wav jpg jpeg png pdf doc docx ppt pptx xls xlsx'
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

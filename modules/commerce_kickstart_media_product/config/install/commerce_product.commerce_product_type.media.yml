@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: Media
+description: ''
+variationTypes:
+  - media_license_download
+  - media_physical
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

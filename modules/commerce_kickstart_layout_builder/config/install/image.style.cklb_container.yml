@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: cklb_container
+label: 'Container (1600px)'
+effects:
+  6ebebab3-365b-4967-930f-f5a6a073e9bc:
+    uuid: 6ebebab3-365b-4967-930f-f5a6a073e9bc
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: true

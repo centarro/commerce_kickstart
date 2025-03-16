@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: physical_product
+label: 'Physical product'
+type: 'canonical_entities:commerce_product'
+pattern: 'products/[commerce_product:title]'
+selection_criteria:
+  6b280efc-2da2-46bb-997c-a6004786a16f:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: 6b280efc-2da2-46bb-997c-a6004786a16f
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      physical: physical
+selection_logic: and
+weight: -5
+relationships: {  }

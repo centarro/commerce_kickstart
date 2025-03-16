@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cklb_products
+    - field.storage.block_content.cklb_title
+id: block_content.cklb_products.cklb_title
+field_name: cklb_title
+entity_type: block_content
+bundle: cklb_products
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

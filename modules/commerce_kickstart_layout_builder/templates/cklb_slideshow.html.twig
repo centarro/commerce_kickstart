@@ -1,0 +1,9 @@
+{% if content %}
+  <div {{ attributes.addClass('slideshow') }}>
+  {% if content.main %}
+    <div {{ region_attributes.main.addClass(['main-region', 'cklb-slideshow']) }}>
+      {{ content.main }}
+    </div>
+  {% endif %}
+  </div>
+{% endif %}

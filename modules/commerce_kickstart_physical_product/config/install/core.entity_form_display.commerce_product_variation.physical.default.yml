@@ -1,0 +1,85 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.physical
+    - field.field.commerce_product_variation.physical.weight
+  module:
+    - commerce_price
+    - field_group
+    - physical
+third_party_settings:
+  field_group:
+    group_inventory:
+      children:
+        - sku
+        - list_price
+        - price
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Inventory
+    group_shipping:
+      children:
+        - weight
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Shipping
+id: commerce_product_variation.physical.default
+targetEntityType: commerce_product_variation
+bundle: physical
+mode: default
+content:
+  list_price:
+    type: commerce_list_price
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  weight:
+    type: physical_measurement_default
+    weight: 8
+    region: content
+    settings:
+      default_unit: ''
+      allow_unit_change: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

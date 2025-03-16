@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cklb_text
+    - field.field.block_content.cklb_text.cklb_text
+  module:
+    - text
+id: block_content.cklb_text.default
+targetEntityType: block_content
+bundle: cklb_text
+mode: default
+content:
+  cklb_text:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
