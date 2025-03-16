@@ -30,6 +30,10 @@
             "url": "https://git.drupalcode.org/issue/block_visibility_conditions-3450896.git"
         },
         {
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/project/commerce_demo.git"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "furf/jquery-ui-touch-punch",
@@ -78,7 +82,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
-        "drupal/commerce_kickstart_demo": "*",
+        "drupal/commerce_demo": "3.0.x-dev",
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-dev": "^10",
         "drupal/devel": "^4.1",
