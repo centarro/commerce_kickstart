@@ -43,8 +43,9 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
       '#title' => $this->t('Full store demo'),
     ];
 
-    $recipe = InstalledVersions::getInstallPath('drupal/commerce_kickstart_demo');
-    if ($recipe && Recipe::createFromDirectory($recipe)) {
+    try {
+      $recipe = InstalledVersions::getInstallPath('drupal/commerce_kickstart_demo');
+      Recipe::createFromDirectory($recipe);
       $form['demo']['install_demo'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Install all features with sample content.'),
@@ -52,7 +53,7 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
         '#default_value' => FALSE,
       ];
     }
-    else {
+    catch (\Exception $e) {
       $form['demo']['#description'] = $this->t('Add the Commerce Demo recipe to your codebase and reload this page if you want to install a complete demo store with sample content: <p><pre>composer require drupal/commerce_kickstart_demo</pre></p>');
     }
 
