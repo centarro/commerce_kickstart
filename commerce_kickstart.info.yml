@@ -8,6 +8,23 @@ distribution:
   install:
     theme: centarro_claro
 
-# Module installed during profile install, but can be uninstalled later.
-install: []
-themes: []
+# A list of forms that should be presented to the user before choosing database
+# settings and installing the system. Each of these forms must implement
+# \Drupal\RecipeKit\Installer\FormInterface.
+forms:
+  - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
+  - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
+
+recipes:
+  # This should be a list of recipes' Composer package names that should always be
+  # applied during the install process.
+  required:
+    - drupal/commerce_kickstart_base
+
+  # This should be a set of recipe combinations to show to the user as choices at the
+  # start of the install process. The keys should be the user-facing names of the
+  # combinations, and the values should be lists of the Composer package names of the
+  # recipes that make up that combination.
+  optional:
+    Install all features with sample content:
+      - drupal/commerce_kickstart_demo

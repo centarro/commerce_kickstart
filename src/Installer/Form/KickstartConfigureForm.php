@@ -44,8 +44,7 @@ class KickstartConfigureForm extends FormBase implements ContainerInjectionInter
     ];
 
     try {
-      $recipe = InstalledVersions::getInstallPath('drupal/commerce_kickstart_demo');
-      Recipe::createFromDirectory($recipe);
+      InstalledVersions::getInstallPath('drupal/commerce_kickstart_demo');
       $form['demo']['install_demo'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Install all features with sample content.'),
