@@ -47,6 +47,7 @@
         }
     ],
     "require": {
+        "drupal/core": "^11",
         "drupal/recipe_installer_kit": "^1.0.0-alpha3",
         "drupal/commerce_kickstart_base": "^1",
         "drupal/config_rewrite": "^1.4",

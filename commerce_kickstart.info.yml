@@ -1,6 +1,6 @@
 name: Commerce Kickstart
 type: profile
-core_version_requirement: ^9 || ^10 || ^11
+core_version_requirement: ^11
 version: VERSION
 description: 'The fastest way to start building on Drupal Commerce.'
 distribution:
