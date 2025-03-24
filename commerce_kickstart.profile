@@ -17,6 +17,7 @@ function commerce_kickstart_install_tasks(): array {
  * Implements hook_install_tasks_alter().
  */
 function commerce_kickstart_install_tasks_alter(array &$tasks, array $install_state): void {
+  \Drupal\RecipeKit\Installer\Messenger::reject('All necessary changes to %dir and %file have been made, so you should remove write permissions to them now in order to avoid security risks. If you are unsure how to do so, consult the <a href=":handbook_url">online handbook</a>.');
   Hooks::installTasksAlter($tasks, $install_state);
 }
 
