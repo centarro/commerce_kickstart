@@ -26,14 +26,10 @@ to start building and launch your store today!
  * To submit bug reports or track changes, use the official issue tracker:
    https://www.drupal.org/project/issues/commerce_kickstart
 
- * This project is still in active development pursuant to a full release.
-   Follow the development plan and release milestones in the following issue:
-   https://www.drupal.org/project/commerce_kickstart/issues/3230155
-
 REQUIREMENTS
 ------------
 
-Your development and hosting environments must be capable of running Drupal 9:
+Your development and hosting environments must be capable of running Drupal 11:
 
 https://www.drupal.org/docs/system-requirements
 
@@ -53,7 +49,7 @@ These are maintained by Centarro, the company behind Drupal Commerce, to
 conform to the same development and documentation standards as Commerce Core.
 
 Additional Drupal modules and themes may be installed via Composer to add new
-features to your store. Search for modules compatible with Drupal 9 on
+features to your store. Search for modules compatible with Drupal 11 on
 drupal.org to see what's available, and filter your search results to those in
 the Commerce Core ecosystem to find modules that extend Drupal Commerce.
 
@@ -83,7 +79,7 @@ cd kickstart
 composer require drupal/commerce_kickstart_demo
 ```
 
-We recommend and support [DDEV-Local](https://github.com/drud/ddev) for local development.
+We recommend and support [DDEV-Local](https://github.com/ddev/ddev) for local development.
 Change into the newly created directory and use the following commands to
 launch the site:
 
@@ -91,13 +87,6 @@ launch the site:
 ddev config
 ddev start
 ```
-
-Just want a quick look? We partnered with SimplyTest.me to create a one-click
-installer in a temporary web environment for more casual evaluation. Browse to
-https://simplytest.me and click *Drupal Commerce Demo*. After installation, you
-can log in as user 1 using `admin` as the username and password. These
-environments will be deleted after a short period of time, so do not build
-anything here you expect to use again!
 
 CONFIGURATION
 -------------
@@ -123,7 +112,7 @@ COMMERCIAL SUPPORT
 ------------------
 
 Centarro offers a full range of consulting and support services for merchants
-doing business on Drupal Commerce, includiung managed hosting, maintenance,
+doing business on Drupal Commerce, including managed hosting, maintenance,
 and support for Commerce Kickstart sites. For more information, contact
 Centarro at info@centarro.io or via contact form on https://www.centarro.io.
 
