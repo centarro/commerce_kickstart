@@ -62,7 +62,7 @@
         "drupal/commerce_kickstart_demo": "*",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-dev": "^11",
-        "drupal/devel": "^4.1",
+        "drupal/devel": "^5",
         "drupal/masquerade": "^2.0",
         "drush/drush": "^13",
         "kporras07/composer-symlinks": "^1.1"
