@@ -78,16 +78,7 @@
     "extra": {
         "symlinks": {
             "commerce_kickstart.profile": "web/profiles/commerce_kickstart/commerce_kickstart.profile",
-            "commerce_kickstart.install": "web/profiles/commerce_kickstart/commerce_kickstart.install",
             "commerce_kickstart.info.yml": "web/profiles/commerce_kickstart/commerce_kickstart.info.yml",
-            "commerce_kickstart.links.menu.yml": "web/profiles/commerce_kickstart/commerce_kickstart.links.menu.yml",
-            "commerce_kickstart.services.yml": "web/profiles/commerce_kickstart/commerce_kickstart.services.yml",
-            "src": "web/profiles/commerce_kickstart/src",
-            "modules": "web/profiles/commerce_kickstart/modules",
-            "themes": "web/profiles/commerce_kickstart/themes",
-            "config/install": "web/profiles/commerce_kickstart/config/install",
-            "config/optional": "web/profiles/commerce_kickstart/config/optional",
-            "content": "web/profiles/commerce_kickstart/content"
         },
         "drupal-scaffold": {
             "locations": {
@@ -115,6 +106,9 @@
             ],
             "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
+            ],
+            "recipes/{$name}": [
+                "type:drupal-recipe"
             ],
             "libraries/{$name}": [
                 "furf/jquery-ui-touch-punch",
