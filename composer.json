@@ -78,7 +78,7 @@
     "extra": {
         "symlinks": {
             "commerce_kickstart.profile": "web/profiles/commerce_kickstart/commerce_kickstart.profile",
-            "commerce_kickstart.info.yml": "web/profiles/commerce_kickstart/commerce_kickstart.info.yml",
+            "commerce_kickstart.info.yml": "web/profiles/commerce_kickstart/commerce_kickstart.info.yml"
         },
         "drupal-scaffold": {
             "locations": {
