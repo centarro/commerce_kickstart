@@ -58,7 +58,7 @@
         "drupal/symfony_mailer": "^1.2"
     },
     "require-dev": {
-        "centarro/certified-projects": "^1",
+        "centarro/certified-projects": "^2",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "dealerdirect/phpcodesniffer-composer-installer": "~0.6 || ~0.7",
