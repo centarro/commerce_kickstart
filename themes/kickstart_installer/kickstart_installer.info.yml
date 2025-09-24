@@ -1,0 +1,20 @@
+name: 'Kickstart Installer'
+type: theme
+base theme: claro
+description: 'Installer theme for Commerce Kickstart.'
+core_version_requirement: ^11
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+libraries:
+  - kickstart_installer/installer

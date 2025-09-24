@@ -1,0 +1,5 @@
+installer:
+  version: VERSION
+  css:
+    theme:
+      css/installer.css: {}

@@ -1,0 +1,118 @@
+//
+// Install and Maintenance page.
+// ----------------------------
+//
+
+// Base colors
+$primary: #4b4e9f;
+$primary-hover: #2c2f70;
+$primary-subtle: #f0f0f8;
+$primary-light: #e1e1f1;
+
+// State colors
+$success: #00746b;
+$info: #72b5e4;
+$warning: #f28d4f;
+$danger: #ff4141;
+
+// Root CSS variables
+:root {
+  // Base colors
+  --color-white: white;
+
+  // State colors
+  --color-primary: #{$primary};
+  --color-success: #{$success};
+  --color-info: #{$info};
+  --color-warning: #{$warning};
+  --color-danger: #{$danger};
+
+  // Headings
+  --headings-color: #{$primary-hover};
+  --headings-fw: bold;
+
+  // Claro overrides
+  --color-absolutezero: #{$primary};
+  --color-absolutezero-hover: #{$primary-hover};
+  --color-bgblue-active: #{$primary-subtle};
+  --button-bg-color: #{$primary-subtle};
+  --button--hover-bg-color: #{$primary-light};
+  --button--active-bg-color: #{$primary-light};
+}
+
+// Main styles
+.install-page,
+.maintenance-page {
+  min-height: 100%;
+  background-color: var(--color-primary);
+  background-image: url('../images/spots.png');
+  background-repeat: no-repeat;
+  background-position: right top 20px;
+  background-size: 300px;
+
+  .layout-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 95% !important;
+
+    .badge-logo {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      display: block;
+      transform: translate(-50%, 100%);
+    }
+
+    @media all and (min-width: 62rem) {
+      display: grid;
+      grid-template-columns: minmax(300px, auto) 1fr;
+      max-width: 68rem !important;
+      gap: 30px 60px;
+
+      > header {
+        grid-column: span 2;
+        width: auto;
+      }
+
+      > main {
+        width: 100%;
+        padding: 0;
+      }
+
+      > .layout-sidebar-first {
+        width: auto;
+      }
+    }
+  }
+
+  [dir="rtl"] & {
+    background-position: right top, 50% 50%;
+  }
+
+  // Form elements
+  .password-parent,
+  .confirm-parent {
+    width: auto;
+  }
+
+  .form-item .password-suggestions {
+    float: none;
+    width: auto;
+  }
+
+  // Table styles
+  table td {
+    word-break: break-all;
+  }
+
+  // Typography
+  .page-title {
+    color: var(--color-absolutezero);
+  }
+
+  .site-version {
+    font-weight: bold;
+    vertical-align: super;
+    color: var(--color-warning);
+  }
+}

@@ -1,0 +1,92 @@
+:root {
+  --color-white: white;
+  --color-primary: #4b4e9f;
+  --color-success: #00746b;
+  --color-info: #72b5e4;
+  --color-warning: #f28d4f;
+  --color-danger: #ff4141;
+  --headings-color: #2c2f70;
+  --headings-fw: bold;
+  --color-absolutezero: #4b4e9f;
+  --color-absolutezero-hover: #2c2f70;
+  --color-bgblue-active: #f0f0f8;
+  --button-bg-color: #f0f0f8;
+  --button--hover-bg-color: #e1e1f1;
+  --button--active-bg-color: #e1e1f1;
+}
+
+.install-page,
+.maintenance-page {
+  min-height: 100%;
+  background-color: var(--color-primary);
+  background-image: url("../images/spots.png");
+  background-repeat: no-repeat;
+  background-position: right top 20px;
+  background-size: 300px;
+}
+.install-page .layout-container,
+.maintenance-page .layout-container {
+  position: relative;
+  box-sizing: border-box;
+  width: 95% !important;
+}
+.install-page .layout-container .badge-logo,
+.maintenance-page .layout-container .badge-logo {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, 100%);
+}
+@media all and (min-width: 62rem) {
+  .install-page .layout-container,
+  .maintenance-page .layout-container {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    max-width: 68rem !important;
+    gap: 30px 60px;
+  }
+  .install-page .layout-container > header,
+  .maintenance-page .layout-container > header {
+    grid-column: span 2;
+    width: auto;
+  }
+  .install-page .layout-container > main,
+  .maintenance-page .layout-container > main {
+    width: 100%;
+    padding: 0;
+  }
+  .install-page .layout-container > .layout-sidebar-first,
+  .maintenance-page .layout-container > .layout-sidebar-first {
+    width: auto;
+  }
+}
+[dir=rtl] .install-page,
+[dir=rtl] .maintenance-page {
+  background-position: right top, 50% 50%;
+}
+.install-page .password-parent,
+.install-page .confirm-parent,
+.maintenance-page .password-parent,
+.maintenance-page .confirm-parent {
+  width: auto;
+}
+.install-page .form-item .password-suggestions,
+.maintenance-page .form-item .password-suggestions {
+  float: none;
+  width: auto;
+}
+.install-page table td,
+.maintenance-page table td {
+  word-break: break-all;
+}
+.install-page .page-title,
+.maintenance-page .page-title {
+  color: var(--color-absolutezero);
+}
+.install-page .site-version,
+.maintenance-page .site-version {
+  font-weight: bold;
+  vertical-align: super;
+  color: var(--color-warning);
+}

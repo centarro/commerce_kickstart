@@ -6,7 +6,7 @@ description: 'The fastest way to start building on Drupal Commerce.'
 distribution:
   name: 'Commerce Kickstart'
   install:
-    theme: centarro_claro
+    theme: kickstart_installer
 
 # A list of forms that should be presented to the user before choosing database
 # settings and installing the system. Each of these forms must implement
