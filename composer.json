@@ -46,9 +46,9 @@
         }
     ],
     "require": {
+        "centarro/commerce_kickstart_installer_helper": "^1.0.0-beta1",
         "drupal/core": "^11",
         "drupal/commerce_kickstart_base": "^1",
-        "drupal/commerce_kickstart_installer_helper": "^1.0.0-beta1",
         "drupal/config_rewrite": "^1.4",
         "drupal/config_split": "^2.0@beta",
         "drupal/symfony_mailer": "^1.2"
