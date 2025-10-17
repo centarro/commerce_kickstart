@@ -26,10 +26,6 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://git.drupalcode.org/issue/bootstrap_basic_image_gallery-3429041.git"
-        },
-        {
-            "type": "vcs",
             "url": "https://git.drupalcode.org/issue/block_visibility_conditions-3450896.git"
         },
         {
@@ -130,10 +126,6 @@
         },
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
-        "patches": {
-            "drupal/bootstrap_basic_image_gallery": {
-                "#3363948 - Fix D10 compatibility issues": "https://www.drupal.org/files/issues/2023-06-01/3363948-3.patch"
-            }
-        }
+        "patches": {}
     }
 }
