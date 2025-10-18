@@ -20,6 +20,12 @@ recipes:
   # applied during the install process.
   required:
     - drupal/commerce_kickstart_base
+  optional:
+    Shipping:
+      name: Shipping
+      description: This recipe installs Commerce Shipping and its dependencies. It demonstrates how to create a flat rate shipping method and how to configure the core address book to differentiate a customer's addresses used for billing vs. shipping.
+      packages:
+        - drupal/commerce_recipe_shipping
 
 hide_messages:
   - 'All necessary changes to %dir and %file have been made, so you should remove write permissions to them now in order to avoid security risks. If you are unsure how to do so, consult the <a href=":handbook_url">online handbook</a>.'
