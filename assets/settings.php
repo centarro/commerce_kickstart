@@ -31,10 +31,8 @@ $settings['file_private_path'] = '../private';
 // This is defined inside the read-only "config" directory, deployed via Git.
 $settings['config_sync_directory'] = '../config/sync';
 
-// Use Centarro Claro for update.php; should be unset if the site does not
-// keep the Centarro Claro admin theme installed.
-// @see https://github.com/centarro/centarro_claro
-$settings['maintenance_theme'] = 'centarro_claro';
+// Use Gin for update.php; unset if the site does not keep Gin installed.
+$settings['maintenance_theme'] = 'gin';
 
 // Enable DDEV-Local specific configuration if running in that environment.
 if (getenv('IS_DDEV_PROJECT') == 'true') {
